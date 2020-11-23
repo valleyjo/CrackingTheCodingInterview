@@ -5,7 +5,7 @@ using FluentAssertions;
 namespace Tests.Chapter1_ArraysAndStrings
 {
     [TestClass]
-    public class Problem_1_1_Tests
+    public class Problem_1_1_IsUniqueTests
     {
         [TestMethod]
         public void IsUniqueNullTest() => Problem_1_1_IsUnique.IsUnique(null).Should().BeFalse();
