@@ -1,12 +1,12 @@
-﻿using System;
+﻿using BenchmarkDotNet.Running;
 
 namespace Benchmarks
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            BenchmarkRunner.Run<Problem_1_1_IsUniqueBenchmark>();
         }
     }
 }
