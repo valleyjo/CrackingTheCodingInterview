@@ -6,7 +6,7 @@ namespace Benchmarks
     {
         public static void Main()
         {
-            BenchmarkRunner.Run<Problem_1_1_IsUniqueBenchmark>();
+            BenchmarkRunner.Run<Problem_1_2_CheckPermutationBenchmark>();
         }
     }
 }

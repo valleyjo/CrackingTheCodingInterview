@@ -5,6 +5,7 @@
     using BenchmarkDotNet.Attributes;
     using Problems.Chapter1_ArraysAndStrings;
 
+    [MemoryDiagnoser]
     public class Problem_1_1_IsUniqueBenchmark
     {
         private readonly string data;
