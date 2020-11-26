@@ -1,10 +1,10 @@
-﻿using System;
-using System.Text;
-using BenchmarkDotNet.Attributes;
-using Problems.Chapter1_ArraysAndStrings;
-
-namespace Benchmarks
+﻿namespace CrackingTheCodingInterview.Benchmarks
 {
+    using System;
+    using System.Text;
+    using BenchmarkDotNet.Attributes;
+    using Problems.Chapter1_ArraysAndStrings;
+
     public class Problem_1_2_CheckPermutationBenchmark
     {
         private readonly string dataOne;

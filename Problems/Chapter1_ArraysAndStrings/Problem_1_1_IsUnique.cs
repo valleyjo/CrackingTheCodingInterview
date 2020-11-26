@@ -1,4 +1,4 @@
-﻿namespace Problems.Chapter1_ArraysAndStrings
+﻿namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings
 {
     using System.Collections.Generic;
 

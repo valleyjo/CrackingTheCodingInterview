@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata;
-
-namespace Problems.Chapter1_ArraysAndStrings
+﻿namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings
 {
     public static class Problem_1_2_CheckPermutation
     {

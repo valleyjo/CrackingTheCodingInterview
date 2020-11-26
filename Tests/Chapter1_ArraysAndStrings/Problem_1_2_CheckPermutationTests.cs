@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Problems.Chapter1_ArraysAndStrings.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings.Tests
 {
+    using FluentAssertions;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass()]
     public class Problem_1_2_CheckPermutationTests
     {

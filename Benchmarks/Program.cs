@@ -1,7 +1,7 @@
-﻿using BenchmarkDotNet.Running;
-
-namespace Benchmarks
+﻿namespace CrackingTheCodingInterview.Benchmarks
 {
+    using BenchmarkDotNet.Running;
+
     public class Program
     {
         public static void Main()

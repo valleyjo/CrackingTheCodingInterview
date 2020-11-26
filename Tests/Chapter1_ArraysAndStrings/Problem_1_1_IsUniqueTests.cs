@@ -1,9 +1,8 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Problems.Chapter1_ArraysAndStrings;
-using FluentAssertions;
-
-namespace Tests.Chapter1_ArraysAndStrings
+namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings.Tests
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using FluentAssertions;
+
     [TestClass]
     public class Problem_1_1_IsUniqueTests
     {

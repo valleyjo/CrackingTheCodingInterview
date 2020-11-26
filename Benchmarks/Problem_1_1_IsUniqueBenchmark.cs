@@ -1,4 +1,4 @@
-﻿namespace Benchmarks
+﻿namespace CrackingTheCodingInterview.Benchmarks
 {
     using System;
     using System.Text;
