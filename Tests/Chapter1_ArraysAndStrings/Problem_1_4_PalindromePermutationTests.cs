@@ -2,26 +2,27 @@
 {
     using FluentAssertions;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Problem = Problem_1_4_PalindromePermutation;
 
     [TestClass()]
     public class Problem_1_4_PalindromePermutationTests
     {
         [TestMethod()]
-        public void NullOrEmptyTest() => Problem_1_4_PalindromePermutation.Execute("").Should().BeFalse();
+        public void NullOrEmptyTest() => Problem.Execute("").Should().BeFalse();
 
         [TestMethod()]
-        public void CapsTest() => Problem_1_4_PalindromePermutation.Execute("Anna").Should().BeFalse();
+        public void CapsTest() => Problem.Execute("Anna").Should().BeFalse();
 
         [TestMethod()]
-        public void EvenCountsTest() => Problem_1_4_PalindromePermutation.Execute("anna").Should().BeTrue();
+        public void EvenCountsTest() => Problem.Execute("anna").Should().BeTrue();
 
         [TestMethod()]
-        public void OddCountsTest() => Problem_1_4_PalindromePermutation.Execute("anbna").Should().BeTrue();
+        public void OddCountsTest() => Problem.Execute("anbna").Should().BeTrue();
 
         [TestMethod()]
-        public void OutOfOrderTest() => Problem_1_4_PalindromePermutation.Execute("nnaba").Should().BeTrue();
+        public void OutOfOrderTest() => Problem.Execute("nnaba").Should().BeTrue();
 
         [TestMethod()]
-        public void MissingPairsTest() => Problem_1_4_PalindromePermutation.Execute("tannab").Should().BeFalse();
+        public void MissingPairsTest() => Problem.Execute("tannab").Should().BeFalse();
     }
 }

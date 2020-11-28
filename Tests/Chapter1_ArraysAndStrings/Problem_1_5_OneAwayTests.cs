@@ -2,35 +2,36 @@
 {
     using FluentAssertions;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Problem = Problem_1_5_OneAway;
 
     [TestClass()]
     public class Problem_1_5_OneAwayTests
     {
         [TestMethod()]
-        public void NullOrEmptyTest() => Problem_1_5_OneAway.Execute(null, string.Empty).Should().BeFalse();
+        public void NullOrEmptyTest() => Problem.Execute(null, string.Empty).Should().BeFalse();
 
         [TestMethod()]
-        public void OneInsertAtEndTest() => Problem_1_5_OneAway.Execute("freddy", "freddya").Should().BeTrue();
+        public void OneInsertAtEndTest() => Problem.Execute("freddy", "freddya").Should().BeTrue();
 
         [TestMethod()]
-        public void OneInsertAtStartTest() => Problem_1_5_OneAway.Execute("afreddy", "freddy").Should().BeTrue();
+        public void OneInsertAtStartTest() => Problem.Execute("afreddy", "freddy").Should().BeTrue();
 
         [TestMethod()]
-        public void OneInsertAtMiddleTest() => Problem_1_5_OneAway.Execute("freaddy", "freddy").Should().BeTrue();
+        public void OneInsertAtMiddleTest() => Problem.Execute("freaddy", "freddy").Should().BeTrue();
 
         [TestMethod()]
-        public void OneRemoveAtEndTest() => Problem_1_5_OneAway.Execute("freddy", "fredd").Should().BeTrue();
+        public void OneRemoveAtEndTest() => Problem.Execute("freddy", "fredd").Should().BeTrue();
 
         [TestMethod()]
-        public void OneRemoveAtStartTest() => Problem_1_5_OneAway.Execute("reddy", "freddy").Should().BeTrue();
+        public void OneRemoveAtStartTest() => Problem.Execute("reddy", "freddy").Should().BeTrue();
 
         [TestMethod()]
-        public void OneRemoveAtMiddleTest() => Problem_1_5_OneAway.Execute("fredy", "freddy").Should().BeTrue();
+        public void OneRemoveAtMiddleTest() => Problem.Execute("fredy", "freddy").Should().BeTrue();
 
         [TestMethod()]
-        public void ZeroEditsTest() => Problem_1_5_OneAway.Execute("Freddy", "Freddy").Should().BeTrue();
+        public void ZeroEditsTest() => Problem.Execute("Freddy", "Freddy").Should().BeTrue();
 
         [TestMethod()]
-        public void TwoEditsAway() => Problem_1_5_OneAway.Execute("Freddy", "Fred").Should().BeFalse();
+        public void TwoEditsAway() => Problem.Execute("Freddy", "Fred").Should().BeFalse();
     }
 }
