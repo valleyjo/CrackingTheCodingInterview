@@ -9,8 +9,13 @@ namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists
         1 -> 2 -> 3
              ^    ^
         */
-        public static void Execute(AListNode<int> head)
+        public static void ExecuteWithSpace(AListNode<int> head)
         {
+            if (head == null)
+            {
+                return;
+            }
+
             var hashSet = new HashSet<int>() { head.Data };
             AListNode<int> prev = head;
             AListNode<int> cur = prev.Next;
@@ -28,6 +33,36 @@ namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists
 
                 hashSet.Add(cur.Data);
                 cur = cur.Next;
+            }
+        }
+
+        public static void ExecuteWithoutSpace(AListNode<int> head)
+        {
+            if (head == null)
+            {
+                return;
+            }
+
+            AListNode<int> primary = head;
+            while (primary != null)
+            {
+                AListNode<int> prev = head;
+                AListNode<int> cur = prev.Next;
+                int value = primary.Data;
+
+                while (cur != null)
+                {
+                    if (cur.Data == value && cur != primary)
+                    {
+                        prev.Next = cur.Next;
+                    }
+                    else
+                    {
+                        prev = cur;
+                    }
+                    cur = cur.Next;
+                }
+                primary = primary.Next;
             }
         }
     }
