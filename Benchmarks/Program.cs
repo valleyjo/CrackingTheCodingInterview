@@ -6,7 +6,7 @@
     {
         public static void Main()
         {
-            BenchmarkRunner.Run<Problem_1_2_CheckPermutationBenchmark>();
+            BenchmarkRunner.Run<Problem_2_1_RemoveDupsBenchmark>();
         }
     }
 }

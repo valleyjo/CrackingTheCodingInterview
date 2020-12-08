@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{7AB3FEA8-5E31-4E61-A72C-7EF99C1CFF65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrackingTheCodingInterview.Tests", "Tests\CrackingTheCodingInterview.Tests.csproj", "{7AB3FEA8-5E31-4E61-A72C-7EF99C1CFF65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems", "Problems\Problems.csproj", "{34B8F755-CE7C-4C72-8414-A1F7566696D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrackingTheCodingInterview.Problems", "Problems\CrackingTheCodingInterview.Problems.csproj", "{34B8F755-CE7C-4C72-8414-A1F7566696D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{74FCCCF7-A638-4DC0-8CDE-4307EA6F8CBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrackingTheCodingInterview.Benchmarks", "Benchmarks\CrackingTheCodingInterview.Benchmarks.csproj", "{74FCCCF7-A638-4DC0-8CDE-4307EA6F8CBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
