@@ -1,4 +1,9 @@
-﻿[*.cs]
+﻿root = true
+
+[*.cs]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
 
 # Default severity for analyzer diagnostics with category 'StyleCop.CSharp.DocumentationRules'
 dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = none
