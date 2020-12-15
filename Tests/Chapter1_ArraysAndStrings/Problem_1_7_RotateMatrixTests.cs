@@ -1,13 +1,12 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using FluentAssertions;
     using Problem = Problem_1_7_RotateMatrix;
 
-    [TestClass()]
+    [TestClass]
     public class Problem_1_7_RotateMatrixTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void SizeThreeArrayTest()
         {
             var data = new int[][]
@@ -25,7 +24,8 @@
             };
 
             Problem.Execute(data);
-            //data.Should().ContainInOrder(rotated);
+
+            // data.Should().ContainInOrder(rotated);
         }
 
         [TestMethod]
@@ -42,7 +42,8 @@
             };
 
             Problem.Execute(data);
-            //data.Should().ContainInOrder(rotated);
+
+            // data.Should().ContainInOrder(rotated);
         }
     }
 }

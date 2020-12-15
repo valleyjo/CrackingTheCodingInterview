@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using CrackingTheCodingInterview.Problems.DataStructures;
-
-namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists
+﻿namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists
 {
+    using System.Collections.Generic;
+    using CrackingTheCodingInterview.Problems.DataStructures;
+
     public static class Problem_2_1_RemoveDups
     {
         /*
@@ -60,8 +60,10 @@ namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists
                     {
                         prev = cur;
                     }
+
                     cur = cur.Next;
                 }
+
                 primary = primary.Next;
             }
         }

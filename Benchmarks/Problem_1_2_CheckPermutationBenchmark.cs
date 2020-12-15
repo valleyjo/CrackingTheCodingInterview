@@ -3,7 +3,7 @@
     using System;
     using System.Text;
     using BenchmarkDotNet.Attributes;
-    using Problems.Chapter1_ArraysAndStrings;
+    using CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings;
 
     public class Problem_1_2_CheckPermutationBenchmark
     {
@@ -22,6 +22,7 @@
                 sbOne.Append(nextChar);
                 sbTwo.Append(nextChar);
             }
+
             this.dataOne = sbOne.ToString();
             this.dataTwo = sbTwo.ToString();
             Console.Write(this.dataOne);

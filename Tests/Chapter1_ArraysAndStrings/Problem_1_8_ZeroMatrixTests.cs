@@ -4,10 +4,10 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Problem = Problem_1_8_ZeroMatrix;
 
-    [TestClass()]
+    [TestClass]
     public class Problem_1_8_ZeroMatrixTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void OneZeroTest()
         {
             var matrix = new int[,]
@@ -24,12 +24,11 @@
                 { 1, 0, 1, 1, },
             };
 
-
             Problem.Execute(matrix);
             matrix.Should().BeEquivalentTo(zeroedMatrix);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void TwoZeroTest()
         {
             var matrix = new int[,]

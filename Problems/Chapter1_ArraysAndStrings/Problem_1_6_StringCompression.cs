@@ -1,7 +1,7 @@
-﻿using System.Text;
-
-namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings
+﻿namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings
 {
+    using System.Text;
+
     public static class Problem_1_6_StringCompression
     {
         /*
@@ -49,6 +49,7 @@ namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings
                 {
                     count++;
                 }
+
                 lastChar = currentChar;
             }
 

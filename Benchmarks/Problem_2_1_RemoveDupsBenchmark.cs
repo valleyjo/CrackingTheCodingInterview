@@ -2,8 +2,8 @@
 {
     using System;
     using BenchmarkDotNet.Attributes;
-    using CrackingTheCodingInterview.Problems.DataStructures;
     using CrackingTheCodingInterview.Problems.Chapter2_LinkedLists;
+    using CrackingTheCodingInterview.Problems.DataStructures;
 
     [MemoryDiagnoser]
     public class Problem_2_1_RemoveDupsBenchmark

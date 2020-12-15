@@ -5,21 +5,8 @@
     public class AListNode<T>
     {
         public T Data { get; set; }
+
         public AListNode<T> Next { get; set; }
-
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            AListNode<T> node = this;
-            while (node.Next != null)
-            {
-                sb.Append($"({node.Data}) -> ");
-                node = node.Next;
-            }
-            sb.Append($"({node.Data})");
-
-            return sb.ToString();
-        }
 
         public static AListNode<T> FromArray(T[] array)
         {
@@ -35,6 +22,21 @@
             }
 
             return head.Next;
+        }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            AListNode<T> node = this;
+            while (node.Next != null)
+            {
+                sb.Append($"({node.Data}) -> ");
+                node = node.Next;
+            }
+
+            sb.Append($"({node.Data})");
+
+            return sb.ToString();
         }
     }
 }

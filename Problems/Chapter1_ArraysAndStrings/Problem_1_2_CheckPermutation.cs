@@ -51,7 +51,7 @@
         }
 
         public static bool CheckPermutation_LessAlloc(string one, string two)
-        {    
+        {
             var oneCharCounts = new int[AlphabetSize];
             for (int i = 0; i < one.Length; i++)
             {

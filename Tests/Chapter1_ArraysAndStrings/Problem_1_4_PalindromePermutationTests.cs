@@ -4,25 +4,25 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Problem = Problem_1_4_PalindromePermutation;
 
-    [TestClass()]
+    [TestClass]
     public class Problem_1_4_PalindromePermutationTests
     {
-        [TestMethod()]
-        public void NullOrEmptyTest() => Problem.Execute("").Should().BeFalse();
+        [TestMethod]
+        public void NullOrEmptyTest() => Problem.Execute(string.Empty).Should().BeFalse();
 
-        [TestMethod()]
+        [TestMethod]
         public void CapsTest() => Problem.Execute("Anna").Should().BeFalse();
 
-        [TestMethod()]
+        [TestMethod]
         public void EvenCountsTest() => Problem.Execute("anna").Should().BeTrue();
 
-        [TestMethod()]
+        [TestMethod]
         public void OddCountsTest() => Problem.Execute("anbna").Should().BeTrue();
 
-        [TestMethod()]
+        [TestMethod]
         public void OutOfOrderTest() => Problem.Execute("nnaba").Should().BeTrue();
 
-        [TestMethod()]
+        [TestMethod]
         public void MissingPairsTest() => Problem.Execute("tannab").Should().BeFalse();
     }
 }

@@ -14,12 +14,14 @@
         {
             var sb = new StringBuilder();
             var random = new Random();
+
             int size = random.Next(10000, 20000);
             for (int i = 0; i < size; i++)
             {
                 char nextChar = (char)random.Next('A', 'z' + 1);
                 sb.Append(nextChar);
             }
+
             this.data = sb.ToString();
         }
 

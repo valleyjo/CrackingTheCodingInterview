@@ -4,12 +4,12 @@
     using CrackingTheCodingInterview.Problems.DataStructures;
     using FluentAssertions;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Problem = Problem_2_1_RemoveDups;
+    using Problem = CrackingTheCodingInterview.Problems.Chapter2_LinkedLists.Problem_2_1_RemoveDups;
 
-    [TestClass()]
+    [TestClass]
     public class Problem_2_1_RemoveDupsTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void DupInMiddleTest()
         {
             var originalOne = AListNode<int>.FromArray(new int[] { 0, 1, 2, 3, 3, 4, });
@@ -20,7 +20,7 @@
             originalTwo.ToString().Should().Be("(0) -> (1) -> (2) -> (3) -> (4)");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void DupInEndTest()
         {
             var originalOne = AListNode<int>.FromArray(new int[] { 0, 1, 2, 3, 3, });

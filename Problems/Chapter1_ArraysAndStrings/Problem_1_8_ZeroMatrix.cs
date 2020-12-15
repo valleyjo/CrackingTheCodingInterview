@@ -25,8 +25,7 @@
             {
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-
-                    if (matrix[row,col] == 0 && !zeroRows.Contains(row) && !zeroCols.Contains(col))
+                    if (matrix[row, col] == 0 && !zeroRows.Contains(row) && !zeroCols.Contains(col))
                     {
                         ZeroCol(matrix, col);
                         ZeroRow(matrix, row);
@@ -64,6 +63,7 @@
                     Console.Write(matrix[row, col]);
                     Console.Write(", ");
                 }
+
                 Console.Write("]");
             }
         }

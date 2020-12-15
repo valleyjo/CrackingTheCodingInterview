@@ -2,7 +2,6 @@
 {
     public class Problem_1_3_Urlify
     {
-
         /*
         "Mr John Smith      "
                     ^
@@ -12,14 +11,13 @@
         Copy from true length to end of array
         if current char is whitespace, write %20 at the end of the array
         move indexes towards begining of array
-        */ 
+        */
         public static string Execute(char[] url, int trueLength)
         {
             if (url == null || url.Length == 0 || trueLength < 0 || trueLength > url.Length)
             {
                 return string.Empty;
             }
-
 
             // Assume that there is enough space in the list to do in place
             for (int index = url.Length - 1, trueLengthIndex = trueLength - 1; index >= 0; index--, trueLengthIndex--)
@@ -34,6 +32,7 @@
                     url[index] = '0';
                     url[index - 1] = '2';
                     url[index - 2] = '%';
+
                     // move index an additional two spaces forward
                     // regular decrement in for loop moves it up an additional space
                     index -= 2;

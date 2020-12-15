@@ -4,10 +4,10 @@
     using FluentAssertions;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    [TestClass()]
+    [TestClass]
     public class ALinkedListTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void ToStringSingleNodeTest()
         {
             var head = new AListNode<int>();
@@ -15,7 +15,7 @@
             head.ToString().Should().Be("(5)");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ToStringManyNodeTest()
         {
             var head = new AListNode<int>();
@@ -32,7 +32,7 @@
             head.ToString().Should().Be("(5) -> (4) -> (3)");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void FromArrayTest()
         {
             var actual = AListNode<int>.FromArray(new int[] { 0, 1, 2, 3, });

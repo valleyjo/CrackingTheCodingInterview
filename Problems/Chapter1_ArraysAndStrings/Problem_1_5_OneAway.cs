@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings
+﻿namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings
 {
+    using System;
+
     public class Problem_1_5_OneAway
     {
         /*
