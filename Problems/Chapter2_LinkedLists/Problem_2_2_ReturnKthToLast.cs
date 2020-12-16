@@ -18,7 +18,7 @@
     k = 0
     k = list length
     */
-    public static int Execute(AListNode<int> head, int k)
+    public static int ExecuteZeroBased(AListNode<int> head, int k)
     {
       if (head == null || k < 0)
       {
@@ -26,12 +26,11 @@
       }
 
       AListNode<int> leader = head;
-
       for (int i = 0; i < k; i++)
       {
         if (leader == null)
         {
-          throw new ArgumentException($"k value '{k}' is less than length of list");
+          throw new ArgumentException($"k value '{k}' is greater than length of list");
         }
 
         leader = leader.Next;
@@ -40,13 +39,39 @@
       // set K at the begining of the list and continue
       // at the end of the list, kBehind will be k behind the end
       AListNode<int> kBehind = head;
+      while (leader.Next != null)
+      {
+        leader = leader.Next;
+        kBehind = kBehind.Next;
+      }
+
+      return kBehind.Data;
+    }
+
+    public static int ExecuteOneBased(AListNode<int> head, int k)
+    {
+      if (head == null || k < 1)
+      {
+        throw new ArgumentException();
+      }
+
+      AListNode<int> leader = head;
+      AListNode<int> kBehind = head;
+
+      for (int i = 1; i <= k; i++)
+      {
+        if (leader == null)
+        {
+          throw new ArgumentException($"k value '{k}' is greater than length of list");
+        }
+
+        leader = leader.Next;
+      }
+
       while (leader != null)
       {
         leader = leader.Next;
-        if (kBehind.Next != null)
-        {
-          kBehind = kBehind.Next;
-        }
+        kBehind = kBehind.Next;
       }
 
       return kBehind.Data;
