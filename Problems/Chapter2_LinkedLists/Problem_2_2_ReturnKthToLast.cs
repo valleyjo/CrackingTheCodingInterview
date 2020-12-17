@@ -22,7 +22,7 @@
     {
       if (head == null || k < 0)
       {
-        throw new ArgumentException();
+        throw new ArgumentException($"{nameof(head)} is null or k value '{k}' is less than zero.");
       }
 
       AListNode<int> leader = head;
@@ -52,7 +52,7 @@
     {
       if (head == null || k < 1)
       {
-        throw new ArgumentException();
+        throw new ArgumentException($"'{nameof(head)}' is null or k value '{k}' is less than 1");
       }
 
       AListNode<int> leader = head;
