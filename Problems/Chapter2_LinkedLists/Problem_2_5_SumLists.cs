@@ -8,15 +8,7 @@
   {
     public static AListNode<int> SumForward(AListNode<int> one, AListNode<int> two)
     {
-      if (one == null)
-      {
-        throw new ArgumentNullException(nameof(one));
-      }
-
-      if (two == null)
-      {
-        throw new ArgumentNullException(nameof(two));
-      }
+      ThrowIfNull(one, two);
 
       BuildStack(one, out Stack<int> oneStack);
       BuildStack(two, out Stack<int> twoStack);
@@ -55,15 +47,7 @@
 
     public static AListNode<int> SumReverse(AListNode<int> one, AListNode<int> two)
     {
-      if (one == null)
-      {
-        throw new ArgumentNullException(nameof(one));
-      }
-
-      if (two == null)
-      {
-        throw new ArgumentNullException(nameof(two));
-      }
+      ThrowIfNull(one, two);
 
       int carry = 0;
       var head = new AListNode<int>();
@@ -99,6 +83,19 @@
       }
 
       return head.Next;
+    }
+
+    private static void ThrowIfNull(AListNode<int> one, AListNode<int> two)
+    {
+      if (one == null)
+      {
+        throw new ArgumentNullException(nameof(one));
+      }
+
+      if (two == null)
+      {
+        throw new ArgumentNullException(nameof(two));
+      }
     }
 
     private static void BuildStack(AListNode<int> head, out Stack<int> stack)
