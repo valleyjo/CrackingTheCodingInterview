@@ -42,7 +42,16 @@
         cur = next;
       }
 
-      return head.Next;
+      BuildStack(head.Next, out Stack<int> resultStack);
+      AListNode<int> resultHead = new AListNode<int>(resultStack.Pop());
+      AListNode<int> resultCur = resultHead;
+      while (resultStack.Count > 0)
+      {
+        resultCur.Next = new AListNode<int>(resultStack.Pop());
+        resultCur = resultCur.Next;
+      }
+
+      return resultHead;
     }
 
     public static AListNode<int> SumReverse(AListNode<int> one, AListNode<int> two)
