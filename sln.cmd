@@ -1,1 +1,1 @@
-CrackingTheCodingInterview.sln
+start CrackingTheCodingInterview.sln
