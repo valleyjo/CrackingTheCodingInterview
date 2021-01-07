@@ -5,12 +5,12 @@
 
   public class Problem_3_2_MinStack
   {
-    private readonly List<MinStackRecord> data;
+    private readonly LinkedList<MinStackRecord> data;
     private int minValue;
 
     public Problem_3_2_MinStack()
     {
-      this.data = new List<MinStackRecord>();
+      this.data = new LinkedList<MinStackRecord>();
       this.minValue = int.MaxValue;
     }
 
@@ -21,23 +21,23 @@
         this.minValue = value;
       }
 
-      this.data.Add(new MinStackRecord(value, this.minValue));
+      this.data.AddLast(new MinStackRecord(value, this.minValue));
     }
 
     public int Pop()
     {
       this.ThrowIfEmpty();
-      int value = this.data[^1].Data;
-      this.data.RemoveAt(this.data.Count - 1);
-      return value;
+      MinStackRecord record = this.data.Last.Value;
+      this.data.RemoveLast();
+      return record.Data;
     }
 
-    public bool IsEmpty() => this.data.Count > 0;
+    public bool IsEmpty() => this.data.Count == 0;
 
     public int GetMin()
     {
       this.ThrowIfEmpty();
-      return this.data[^1].MinValue;
+      return this.data.Last.Value.MinValue;
     }
 
     private void ThrowIfEmpty()
