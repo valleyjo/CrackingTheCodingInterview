@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Problems.Tests.Chapter2_LinkedLists
+﻿namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists.Tests
 {
   using System;
   using CrackingTheCodingInterview.Problems.DataStructures;
