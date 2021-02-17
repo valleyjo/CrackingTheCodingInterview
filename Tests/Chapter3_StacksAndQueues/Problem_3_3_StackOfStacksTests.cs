@@ -3,7 +3,7 @@
   using System;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using StackOfStacks = Problem_3_3_StackOfStacks;
+  using StackOfStacks = CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues.Problem_3_3_StackOfStacks;
 
   [TestClass]
   public class Problem_3_3_StackOfStacksTests

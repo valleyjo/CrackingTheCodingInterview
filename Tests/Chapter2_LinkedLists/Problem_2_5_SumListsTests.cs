@@ -4,7 +4,7 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Problem = Problem_2_5_SumLists;
+  using Problem = CrackingTheCodingInterview.Problems.Chapter2_LinkedLists.Problem_2_5_SumLists;
 
   [TestClass]
   public class Problem_2_5_SumListsTests
