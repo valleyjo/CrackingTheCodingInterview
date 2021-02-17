@@ -3,7 +3,7 @@
   using System;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using MinStack = Problem_3_2_MinStack;
+  using MinStack = CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues.Problem_3_2_MinStack;
 
   [TestClass]
   public class Problem_3_2_MinStackTests

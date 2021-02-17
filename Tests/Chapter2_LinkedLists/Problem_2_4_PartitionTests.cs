@@ -4,7 +4,7 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Problem = Problems.Chapter2_LinkedLists.Problem_2_4_Partition;
+  using Problem = CrackingTheCodingInterview.Problems.Chapter2_LinkedLists.Problem_2_4_Partition;
 
   [TestClass]
   public class Problem_2_4_PartitionTests
