@@ -13,7 +13,7 @@
 
     public Problem_2_1_RemoveDupsBenchmark()
     {
-      var data = new int[10000];
+      int[] data = new int[10000];
 
       var random = new Random();
 
