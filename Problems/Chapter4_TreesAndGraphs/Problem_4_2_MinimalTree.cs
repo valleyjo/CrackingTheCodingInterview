@@ -13,40 +13,59 @@
         throw new ArgumentException("Input list is null or empty");
       }
 
-      int index = (input.Count - 1) / 2;
-      Log($"Execute; index: '{index}'");
-      var root = new ABinaryTreeNode(input[index]);
-      AddLeft(input, root, 0, index - 1);
-      AddRight(input, root, index + 1, input.Count - 1);
-      return root;
+      ////int index = (input.Count - 1) / 2;
+      ////var root = new ABinaryTreeNode(input[index]);
+      ////AddLeft(input, root, 0, index - 1);
+      ////AddRight(input, root, index + 1, input.Count - 1);
+      ////return root;
+
+      return CreateMinimalBST(input, 0, input.Count - 1);
+    }
+
+    public static ABinaryTreeNode CreateMinimalBST(List<int> input, int start, int end)
+    {
+      if (end < start)
+      {
+        return null;
+      }
+
+      int index = (start + end) / 2;
+      return new ABinaryTreeNode(
+        input[index],
+        CreateMinimalBST(input, start, index - 1),
+        CreateMinimalBST(input, index + 1, end));
     }
 
     public static void AddRight(List<int> input, ABinaryTreeNode root, int start, int end)
     {
       int index = (start + end) / 2;
-      Log($"{nameof(AddRight)}; Adding '{input[index]}'; start: '{start}' end: '{end}' index: '{index}'");
       root.Right = new ABinaryTreeNode(input[index]);
-      if (start < end)
+
+      if (start < index)
       {
-        return;
+        AddLeft(input, root.Right, start, index - 1);
       }
 
-      AddLeft(input, root.Right, start, index - 1);
-      AddRight(input, root.Right, index + 1, end);
+      if (index < end)
+      {
+        AddRight(input, root.Right, index + 1, end);
+      }
     }
 
     public static void AddLeft(List<int> input, ABinaryTreeNode root, int start, int end)
     {
       int index = (start + end) / 2;
-      Log($"{nameof(AddLeft)}; Adding '{input[index]}'; start: '{start}' end: '{end}' index: '{index}'");
       root.Left = new ABinaryTreeNode(input[index]);
-      if (start < end)
+
+      if (start < index)
       {
-        return;
+        AddLeft(input, root.Left, start, index - 1);
       }
 
-      AddLeft(input, root.Left, start, index - 1);
-      AddRight(input, root.Left, index + 1, end);
+      if (index < end)
+      {
+        AddRight(input, root.Left, index + 1, end);
+      }
     }
 
     private static void Log(string s)
