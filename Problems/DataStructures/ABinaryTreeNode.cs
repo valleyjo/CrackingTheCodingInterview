@@ -1,5 +1,7 @@
 ﻿namespace CrackingTheCodingInterview.Problems.DataStructures
 {
+  using System;
+
   public class ABinaryTreeNode
   {
     public ABinaryTreeNode(int value) => this.Value = value;
@@ -16,5 +18,20 @@
     public ABinaryTreeNode Right { get; set; }
 
     public int Value { get; set; }
+
+    public int GetHeight()
+    {
+      return GetHeight(this, 1);
+    }
+
+    private static int GetHeight(ABinaryTreeNode next, int level)
+    {
+      if (next == null)
+      {
+        return level - 1;
+      }
+
+      return Math.Max(GetHeight(next.Left, level + 1), GetHeight(next.Right, level + 1));
+    }
   }
 }
