@@ -9,9 +9,23 @@
     public static void Main()
     {
       ////BenchmarkRunner.Run<Problem_2_1_RemoveDupsBenchmark>();
-      var nums = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, };
-      ABinaryTreeNode root = Problems.Chapter4_TreesAndGraphs.Problem_4_2_MinimalTree.Execute(nums);
-      ABinaryTreePrinter.Print(root);
+      BinaryTreePrinter();
+    }
+
+    private static void BinaryTreePrinter()
+    {
+      var expected = new ABinaryTreeNode(3);
+
+      // Left side
+      expected.Left = new ABinaryTreeNode(1);
+      expected.Left.Right = new ABinaryTreeNode(2);
+
+      // Right side
+      expected.Right = new ABinaryTreeNode(5);
+      expected.Right.Left = new ABinaryTreeNode(4);
+      expected.Right.Right = new ABinaryTreeNode(6);
+
+      expected.Print();
     }
   }
 }
