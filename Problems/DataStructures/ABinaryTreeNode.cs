@@ -24,6 +24,20 @@
       return GetHeight(this, 1);
     }
 
+    /// <summary>
+    /// Checks for euality by comparing the value of the node. Used for unit
+    /// testing via FluentAssertions
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns></returns>
+    public override bool Equals(object obj)
+    {
+      var other = obj as ABinaryTreeNode;
+      return other != null && other.Value == this.Value;
+    }
+
+    public override int GetHashCode() => base.GetHashCode();
+
     private static int GetHeight(ABinaryTreeNode next, int level)
     {
       if (next == null)

@@ -78,5 +78,26 @@
 
       node.GetHeight().Should().Be(3);
     }
+
+    [TestMethod]
+    public void EqualsWrongObjTypeTest()
+    {
+      var node = new ABinaryTreeNode(1);
+      node.Equals(new AGraph()).Should().BeFalse();
+    }
+
+    [TestMethod]
+    public void EqualsRightTypeWrongValueTest()
+    {
+      var node = new ABinaryTreeNode(1);
+      node.Equals(new ABinaryTreeNode(5)).Should().BeFalse();
+    }
+
+    [TestMethod]
+    public void EqualsShouldMatchTest()
+    {
+      var node = new ABinaryTreeNode(1);
+      node.Equals(new ABinaryTreeNode(1)).Should().BeTrue();
+    }
   }
 }
