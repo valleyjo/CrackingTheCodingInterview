@@ -36,6 +36,7 @@
         CreateMinimalBST(input, index + 1, end));
     }
 
+    /*
     public static void AddRight(List<int> input, ABinaryTreeNode root, int start, int end)
     {
       int index = (start + end) / 2;
@@ -76,5 +77,6 @@
         Console.WriteLine(s);
       }
     }
+    */
   }
 }
