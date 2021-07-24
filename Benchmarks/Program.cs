@@ -8,8 +8,8 @@
   {
     public static void Main()
     {
-      ////BenchmarkRunner.Run<Problem_2_1_RemoveDupsBenchmark>();
-      BinaryTreePrinter();
+      BenchmarkRunner.Run<Problem_4_3_ListOfDepths>();
+      ////BinaryTreePrinter();
     }
 
     private static void BinaryTreePrinter()

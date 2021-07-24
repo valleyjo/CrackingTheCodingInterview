@@ -1,5 +1,6 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs
 {
+  using System.Collections;
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
@@ -90,7 +91,7 @@
       BuildDepthMap(depth + 1, node.Right, map);
     }
 
-    public class DepthMap
+    public class DepthMap : IEnumerable<KeyValuePair<int, List<ABinaryTreeNode>>>
     {
       private readonly Dictionary<int, List<ABinaryTreeNode>> depthMap = new ();
 
@@ -101,7 +102,7 @@
 
       public void AddOrUpdate(int depth, ABinaryTreeNode node)
       {
-        if (!this.depthMap.TryGetValue(depth, out List<ABinaryTreeNode> nodeList))
+        if (this.depthMap.TryGetValue(depth, out List<ABinaryTreeNode> nodeList))
         {
           nodeList.Add(node);
         }
@@ -110,6 +111,10 @@
           this.depthMap[depth] = new List<ABinaryTreeNode>() { node };
         }
       }
+
+      public IEnumerator<KeyValuePair<int, List<ABinaryTreeNode>>> GetEnumerator() => this.depthMap.GetEnumerator();
+
+      IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
     }
   }
 }
