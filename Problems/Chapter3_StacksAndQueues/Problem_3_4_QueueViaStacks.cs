@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Tests.Chapter3_StacksAndQueues
+﻿namespace CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues
 {
   using System;
   using System.Collections.Generic;

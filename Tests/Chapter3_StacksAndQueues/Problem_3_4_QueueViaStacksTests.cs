@@ -3,7 +3,7 @@
   using System;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using MyQueue = CrackingTheCodingInterview.Tests.Chapter3_StacksAndQueues.Problem_3_4_QueueViaStacks;
+  using MyQueue = CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues.Problem_3_4_QueueViaStacks;
 
   [TestClass]
   public class Problem_3_4_QueueViaStacksTests
