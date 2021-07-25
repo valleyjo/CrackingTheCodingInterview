@@ -7,7 +7,8 @@
   {
     public static void Main()
     {
-      BenchmarkRunner.Run<Problem_4_3_ListOfDepths>();
+      BenchmarkRunner.Run<Problem_4_4_CheckBalanced>();
+      ////new Problem_4_3_ListOfDepths();
       ////BinaryTreePrinter();
     }
 
