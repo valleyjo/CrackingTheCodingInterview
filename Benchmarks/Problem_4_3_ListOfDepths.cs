@@ -8,7 +8,7 @@
   [MemoryDiagnoser]
   public class Problem_4_3_ListOfDepths
   {
-    private const int MaxDepth = 15; // tree will have 2^MaxDepth -1 nodes since it is perfect
+    private const int MaxDepth = 6;
     private readonly ABinaryTreeNode root;
 
     public Problem_4_3_ListOfDepths()

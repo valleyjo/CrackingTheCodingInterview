@@ -11,8 +11,7 @@
   public class Problem_4_3_ListOfDepthsTests
   {
     [TestMethod]
-    public void BuildDepthDictionary_EmptyTest() =>
-      Solution.BuildDepthDictionary(null).Should().BeEquivalentTo(new Dictionary<int, List<int>>());
+    public void BuildDepthDictionary_EmptyTest() => Solution.BuildDepthDictionary(null).Should().BeEquivalentTo(new Dictionary<int, List<int>>());
 
     [TestMethod]
     public void BuildDepthDictionary_OneNodeTest()
@@ -47,8 +46,7 @@
     }
 
     [TestMethod]
-    public void BuildDepthMap_EmptyTest() =>
-      Solution.BuildDepthMap(null).Should().BeEquivalentTo(new Solution.DepthMap());
+    public void BuildDepthMap_EmptyTest() => Solution.BuildDepthMap(null).Should().BeEquivalentTo(new Solution.DepthMap());
 
     [TestMethod]
     public void BuildDepthMap_OneNodeTest()
@@ -81,8 +79,7 @@
     }
 
     [TestMethod]
-    public void BuildDepthMapLessMemory_EmptyTest() =>
-      Solution.BuildDepthMapLessMemory(null).Should().BeEquivalentTo(new Solution.DepthMap());
+    public void BuildDepthMapLessMemory_EmptyTest() => Solution.BuildDepthMapLessMemory(null).Should().BeEquivalentTo(new Solution.DepthMap());
 
     [TestMethod]
     public void BuildDepthMapLessMemory_OneNodeTest()

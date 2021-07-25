@@ -1,6 +1,5 @@
 ﻿namespace CrackingTheCodingInterview.Benchmarks
 {
-  using System.Collections.Generic;
   using BenchmarkDotNet.Running;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
