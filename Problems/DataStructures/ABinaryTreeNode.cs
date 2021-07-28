@@ -4,18 +4,53 @@
 
   public class ABinaryTreeNode
   {
+    private ABinaryTreeNode right;
+
+    private ABinaryTreeNode left;
+
     public ABinaryTreeNode(int value) => this.Value = value;
 
-    public ABinaryTreeNode(int value, ABinaryTreeNode left = null, ABinaryTreeNode right = null)
+    public ABinaryTreeNode(
+      int value,
+      ABinaryTreeNode left = null,
+      ABinaryTreeNode right = null,
+      ABinaryTreeNode parent = null)
     {
       this.Value = value;
       this.Left = left;
       this.Right = right;
+      this.Parent = parent;
     }
 
-    public ABinaryTreeNode Left { get; set; }
+    public ABinaryTreeNode Left
+    {
+      get => this.left;
+      set
+      {
+        if (value != null)
+        {
+          value.Parent = this;
+        }
 
-    public ABinaryTreeNode Right { get; set; }
+        this.left = value;
+      }
+    }
+
+    public ABinaryTreeNode Right
+    {
+      get => this.right;
+      set
+      {
+        if (value != null)
+        {
+          value.Parent = this;
+        }
+
+        this.right = value;
+      }
+    }
+
+    public ABinaryTreeNode Parent { get; internal set; }
 
     public int Value { get; set; }
 
