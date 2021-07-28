@@ -1,5 +1,6 @@
 ﻿namespace CrackingTheCodingInterview.Tests.DataStructures
 {
+  using System;
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -98,6 +99,44 @@
     {
       var node = new ABinaryTreeNode(1);
       node.Equals(new ABinaryTreeNode(1)).Should().BeTrue();
+    }
+
+    [TestMethod]
+    public void ParentSetOnLeftTest()
+    {
+      var root = new ABinaryTreeNode(5);
+      var left = new ABinaryTreeNode(6);
+      left.Parent.Should().BeNull();
+      root.Left = left;
+      left.Parent.Should().BeSameAs(root);
+    }
+
+    [TestMethod]
+    public void LeftSetAsNullTest()
+    {
+      var root = new ABinaryTreeNode(5);
+      Action act = () => root.Left = null;
+      act.Should().NotThrow();
+      root.Left.Should().BeNull();
+    }
+
+    [TestMethod]
+    public void ParentSetOnRightTest()
+    {
+      var root = new ABinaryTreeNode(5);
+      var right = new ABinaryTreeNode(6);
+      right.Parent.Should().BeNull();
+      root.Right = right;
+      right.Parent.Should().BeSameAs(root);
+    }
+
+    [TestMethod]
+    public void RightSetAsNullTest()
+    {
+      var root = new ABinaryTreeNode(5);
+      Action act = () => root.Left = null;
+      act.Should().NotThrow();
+      root.Left.Should().BeNull();
     }
   }
 }
