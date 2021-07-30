@@ -2,7 +2,6 @@
 {
   using System;
   using System.Collections.Generic;
-  using System.Linq;
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -18,7 +17,47 @@
     }
 
     [TestMethod]
-    public void AddEdgeTest()
+    public void ContainsNodeFalseTest() => new AGraph().ContainsNode(5).Should().BeFalse();
+
+    [TestMethod]
+    public void ContainsNodeTrueTest()
+    {
+      var g = new AGraph();
+      g.AddNode(5);
+      g[5].Should().BeEquivalentTo(new List<int>());
+    }
+
+    [TestMethod]
+    public void AddNodeTest()
+    {
+      var g = new AGraph();
+      g.AddNode(5);
+      g[5].Should().BeEquivalentTo(new List<int>());
+    }
+
+    [TestMethod]
+    public void AddNodeAlreadyExistsTest()
+    {
+      var g = new AGraph();
+      g.AddNode(5);
+      g[5].Should().BeEquivalentTo(new List<int>());
+      g.AddNode(5);
+      g[5].Should().BeEquivalentTo(new List<int>());
+    }
+
+    [TestMethod]
+    public void RemoveNodeTest()
+    {
+      var g = new AGraph();
+      g.AddNode(5);
+      g[5].Should().BeEquivalentTo(new List<int>());
+      g.RemoveNode(5);
+      Func<List<int>> act = () => g[5];
+      act.Should().Throw<KeyNotFoundException>();
+    }
+
+    [TestMethod]
+    public void AddEdgeBidirectionalTest()
     {
       var g = new AGraph();
       g.AddEdge(-15, 3);
@@ -27,10 +66,40 @@
     }
 
     [TestMethod]
+    public void AddEdgeDirectionalTest()
+    {
+      var g = new AGraph(GraphType.Directional);
+      g.AddEdge(-15, 3);
+      g[-15].Should().BeEquivalentTo(new List<int>() { 3 });
+      Func<List<int>> func = () => g[3];
+      func.Should().Throw<KeyNotFoundException>();
+    }
+
+    [TestMethod]
+    public void RemoveEdgeBidirectionalTest()
+    {
+      var g = new AGraph();
+      g.AddEdge(-15, 3);
+      g.RemoveEdge(-15, 3);
+      g[-15].Should().BeEquivalentTo(new List<int>());
+      g[3].Should().BeEquivalentTo(new List<int>());
+    }
+
+    [TestMethod]
+    public void RemoveEdgeDirectionalTest()
+    {
+      var g = new AGraph(GraphType.Directional);
+      g.AddEdge(-15, 3);
+      g.RemoveEdge(-15, 3);
+      g[-15].Should().BeEquivalentTo(new List<int>());
+    }
+
+    [TestMethod]
     public void IndexAccessorMissingTest()
     {
       var g = new AGraph();
-      g[15].Should().BeEquivalentTo(Enumerable.Empty<int>());
+      Func<List<int>> act = () => g[15];
+      act.Should().Throw<KeyNotFoundException>();
     }
 
     [TestMethod]
