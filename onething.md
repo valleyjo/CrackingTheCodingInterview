@@ -1,5 +1,5 @@
 # Chapter 4
-1) BFS refresher
+1) BFS & refresher
 2) Objects can be built recursivly rather than constructing the reference first and passing that through the recursive method
 3) Iterative is not always faster. Wait to create the object until it's needed/
 4) Do work on the way "up" the recursive call stack, after the recursive method completes
@@ -9,4 +9,6 @@
     1) When dealing with directed graphs, use two for O(1) lookup in both directions
     2) Change the words to change the arrow direction if it's not making sense ("depends on" or "built before")
     3) Topological sort
-8) help
+8)
+    1) know when to fall back to less performant solution
+    2) Enumerate possible cases for recursive function doing work on the way back up.
