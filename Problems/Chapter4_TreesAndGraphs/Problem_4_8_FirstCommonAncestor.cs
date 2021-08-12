@@ -1,19 +1,12 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs
 {
-  using System;
-  using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
   public static class Problem_4_8_FirstCommonAncestor
   {
     public static ABinaryTreeNode Execute(int one, int two, ABinaryTreeNode tree)
     {
-      if (tree == null || (tree.Left == null && tree.Right == null))
-      {
-        return tree;
-      }
-
-      if (!TreeContainsNode(tree, one) && !TreeContainsNode(tree, two))
+      if (!TreeContainsNode(tree, one) || !TreeContainsNode(tree, two))
       {
         return null;
       }
@@ -21,8 +14,19 @@
       return ExecuteSimple(one, two, tree);
     }
 
+    public static ABinaryTreeNode ExecuteOptimal(int one, int two, ABinaryTreeNode tree)
+    {
+      ReturnValue result = ExecuteOptimalInternal(tree, one, two);
+      return result.IsAncestor ? result.Node : null;
+    }
+
     private static ABinaryTreeNode ExecuteSimple(int one, int two, ABinaryTreeNode tree)
     {
+      if (tree == null || tree.Value == one || tree.Value == two)
+      {
+        return tree;
+      }
+
       bool oneOnLeft = TreeContainsNode(tree.Left, one);
       bool twoOnLeft = TreeContainsNode(tree.Left, two);
 
@@ -52,7 +56,7 @@
       return TreeContainsNode(tree.Left, node) || TreeContainsNode(tree.Right, node);
     }
 
-    private static ReturnValue ExecuteOptimal(ABinaryTreeNode root, int one, int two, int searchValue)
+    private static ReturnValue ExecuteOptimalInternal(ABinaryTreeNode root, int one, int two)
     {
       if (root == null)
       {
@@ -64,13 +68,13 @@
         return new ReturnValue(root, true);
       }
 
-      ReturnValue firstNode = ExecuteOptimal(root.Left, one, two, one);
+      ReturnValue firstNode = ExecuteOptimalInternal(root.Left, one, two);
       if (firstNode.IsAncestor)
       {
         return firstNode;
       }
 
-      ReturnValue secondNode = ExecuteOptimal(root.Right, one, two, two);
+      ReturnValue secondNode = ExecuteOptimalInternal(root.Right, one, two);
 
       if (secondNode.IsAncestor)
       {
