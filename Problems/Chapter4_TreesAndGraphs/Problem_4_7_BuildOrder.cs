@@ -42,9 +42,12 @@
         foreach (byte node in nodesToRemove)
         {
           // remove the edges for nodes that have been built
-          foreach (int outgoingConnection in reverseGraph[node])
+          if (reverseGraph.ContainsNode(node))
           {
-            graph.RemoveEdge(outgoingConnection, node);
+            foreach (int outgoingConnection in reverseGraph[node])
+            {
+              graph.RemoveEdge(outgoingConnection, node);
+            }
           }
 
           reverseGraph.RemoveNode(node);

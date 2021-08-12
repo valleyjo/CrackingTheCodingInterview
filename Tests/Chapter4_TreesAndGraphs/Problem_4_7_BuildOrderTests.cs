@@ -6,7 +6,6 @@
   using Microsoft.VisualStudio.TestTools.UnitTesting;
   using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_7_BuildOrder;
 
-  /*
   [TestClass]
   public class Problem_4_7_BuildOrderTests
   {
@@ -69,5 +68,4 @@
       Solution.Execute(projects, dependencies).Should().BeEquivalentTo(new List<int>() { 6, 5, 1, 2, 4, 3, });
     }
   }
-  */
 }
