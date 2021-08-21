@@ -60,8 +60,7 @@
     }
 
     /// <summary>
-    /// Checks for euality by comparing the value of the node. Used for unit
-    /// testing via FluentAssertions
+    /// Checks for euality by comparing the value of the node. Does not validate children / parents
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
