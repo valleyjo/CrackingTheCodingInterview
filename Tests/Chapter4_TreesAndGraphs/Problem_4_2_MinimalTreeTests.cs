@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs
+﻿namespace CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Tests
 {
   using System;
   using System.Collections.Generic;
