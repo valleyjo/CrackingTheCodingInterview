@@ -1,3 +1,6 @@
+Review again:
+4.9, 4.12
+
 # Chapter 4
 1) BFS & refresher
 2) Objects can be built recursively rather than constructing the reference first and passing that through the recursive method
@@ -15,4 +18,4 @@
 9) TODO
 10) Don't use recursive `yield return`
 11) Pay attention to the restrictions imposed by the question. Don't implement stuff for testing until the testing is required.
-12)
+12) Think about what it means to "restart" the recursion in order to find every path
