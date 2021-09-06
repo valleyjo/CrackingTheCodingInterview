@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <RootNamespace>CrackingTheCodingInterview.Tests</RootNamespace>
+    <RootNamespace>CrackingTheCodingInterview.Problems.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
