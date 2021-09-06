@@ -33,3 +33,6 @@ Review again:
     3) Isolate odd digits with 0x55
     4) 2 HEX digits per byte, 8 HEX digits per 32bit integer
 8) Draw out examples
+
+# Chapter 8
+1) Draw out a tree call structure and reduce common calls
