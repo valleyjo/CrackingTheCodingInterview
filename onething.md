@@ -36,3 +36,8 @@ Review again:
 
 # Chapter 8
 1) Draw out a tree call structure and reduce common calls
+2) 
+    1) Implement GetHashCode and Equals to use a class / struct with HashSet or Dictionary
+    2) Be careful when using multi-dimensional or jagged arrays
+    3) jagged arrays initialize the first array, then each inside it
+3) Be careful about recursive calls with the index value, how should it be adjusted?
