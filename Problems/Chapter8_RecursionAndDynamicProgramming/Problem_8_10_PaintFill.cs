@@ -1,35 +1,42 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming
 {
-  using System.Collections.Generic;
-
-  public static class Problem_8_09_Parens
+  public static class Problem_8_10_PaintFill
   {
-    public static List<string> Execute(uint count)
+    public static uint[,] Execute(uint[,] input, uint row, uint col, uint newColor)
     {
-      var results = new List<string>();
-      Execute(0, 0, count, string.Empty, results);
-      return results;
+      if (input == null || input.Length == 0)
+      {
+        return input;
+      }
+
+      // let this throw index out of range exception to inform the caller the row and or col values are invalid
+      uint selectedColor = input[row, col];
+      Execute(input, row, col, newColor, selectedColor);
+
+      return input;
     }
 
-    public static void Execute(uint openCount, uint closedCount, uint pairCount, string current, List<string> results)
+    private static void Execute(uint[,] input, uint row, uint col, uint newColor, uint selectedColor)
     {
-      if (openCount > pairCount || closedCount > pairCount)
+      // row out of range
+      // col out of range
+      // pixel is already the final color
+      // pixel is not the droid we are looking for
+      if (
+        input.GetLength(0) - 1 < row ||
+        input.GetLength(1) - 1 < col ||
+        input[row, col] == newColor ||
+        input[row, col] != selectedColor)
       {
         return;
       }
 
-      if (openCount == closedCount && openCount == pairCount)
-      {
-        results.Add(current);
-        return;
-      }
-
-      if (openCount != closedCount)
-      {
-        Execute(openCount, closedCount + 1, pairCount, current + ")", results);
-      }
-
-      Execute(openCount + 1, closedCount, pairCount, current + "(", results);
+      // replace the pixel color and attempt to replace the neighbors
+      input[row, col] = newColor;
+      Execute(input, row + 1, col, newColor, selectedColor);
+      Execute(input, row - 1, col, newColor, selectedColor);
+      Execute(input, row, col + 1, newColor, selectedColor);
+      Execute(input, row, col - 1, newColor, selectedColor);
     }
   }
 }

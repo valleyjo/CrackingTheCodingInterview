@@ -3,7 +3,7 @@
   using System;
   using System.Collections.Generic;
 
-  public static class Problem_8_7_PermutationsWithoutDups
+  public static class Problem_8_07_PermutationsWithoutDups
   {
     public static List<string> Execute(string input)
     {

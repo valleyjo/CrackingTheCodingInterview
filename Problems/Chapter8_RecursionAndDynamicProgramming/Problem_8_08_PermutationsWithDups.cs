@@ -2,7 +2,7 @@
 {
   using System.Collections.Generic;
 
-  public static class Problem_8_8_PermutationsWithDups
+  public static class Problem_8_08_PermutationsWithDups
   {
     public static List<string> Execute(string input)
     {
