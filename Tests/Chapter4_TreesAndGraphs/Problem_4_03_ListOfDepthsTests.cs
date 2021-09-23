@@ -5,10 +5,10 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_3_ListOfDepths;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_03_ListOfDepths;
 
   [TestClass]
-  public class Problem_4_3_ListOfDepthsTests
+  public class Problem_4_03_ListOfDepthsTests
   {
     [TestMethod]
     public void BuildDepthDictionary_EmptyTest() => Solution.BuildDepthDictionary(null).Should().BeEquivalentTo(new Dictionary<int, List<int>>());

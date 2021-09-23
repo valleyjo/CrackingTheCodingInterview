@@ -4,7 +4,7 @@
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
-  public static class Problem_4_2_MinimalTree
+  public static class Problem_4_02_MinimalTree
   {
     public static ABinaryTreeNode Execute(List<int> input)
     {

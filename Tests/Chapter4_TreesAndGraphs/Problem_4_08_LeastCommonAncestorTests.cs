@@ -3,10 +3,10 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_8_FirstCommonAncestor;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_08_FirstCommonAncestor;
 
   [TestClass]
-  public class Problem_4_8_LeastCommonAncestorTests
+  public class Problem_4_08_LeastCommonAncestorTests
   {
     [TestMethod]
     public void NullTest()

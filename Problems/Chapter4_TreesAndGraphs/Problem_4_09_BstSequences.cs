@@ -3,7 +3,7 @@
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
-  public static class Problem_4_9_BstSequences
+  public static class Problem_4_09_BstSequences
   {
     public static List<List<int>> Execute(ABinaryTreeNode tree)
     {

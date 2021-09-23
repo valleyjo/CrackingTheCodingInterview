@@ -4,10 +4,10 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_4_CheckBalanced;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_04_CheckBalanced;
 
   [TestClass]
-  public class Problem_4_4_CheckBalancedTests
+  public class Problem_4_04_CheckBalancedTests
   {
     [TestMethod]
     public void Naive_NullTest() => Solution.ExecuteNaive(null).Should().BeTrue();

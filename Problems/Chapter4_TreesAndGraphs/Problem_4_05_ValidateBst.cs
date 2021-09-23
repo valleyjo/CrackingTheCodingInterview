@@ -3,7 +3,7 @@
   using System;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
-  public static class Problem_4_5_ValidateBst
+  public static class Problem_4_05_ValidateBst
   {
     public static bool Execute(ABinaryTreeNode root) => ExecuteInternal(root, int.MinValue, int.MaxValue);
 

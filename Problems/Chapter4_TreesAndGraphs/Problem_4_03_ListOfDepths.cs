@@ -4,7 +4,7 @@
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
-  public static class Problem_4_3_ListOfDepths
+  public static class Problem_4_03_ListOfDepths
   {
     public static Dictionary<int, List<ABinaryTreeNode>> BuildDepthDictionary(ABinaryTreeNode root)
     {

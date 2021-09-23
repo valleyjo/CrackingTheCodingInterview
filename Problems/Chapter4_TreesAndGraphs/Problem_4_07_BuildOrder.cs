@@ -4,7 +4,7 @@
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
-  public static class Problem_4_7_BuildOrder
+  public static class Problem_4_07_BuildOrder
   {
     public static List<byte> Execute(List<int> projects, List<Dependency> dependencies)
     {

@@ -3,10 +3,10 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_6_Successor;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_06_Successor;
 
   [TestClass]
-  public class Problem_4_6_SuccessorTests
+  public class Problem_4_06_SuccessorTests
   {
     [TestMethod]
     public void NullTest() => Solution.Execute(null).Should().BeNull();

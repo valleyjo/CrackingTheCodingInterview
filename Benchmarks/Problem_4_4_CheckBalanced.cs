@@ -3,7 +3,7 @@
   using System;
   using BenchmarkDotNet.Attributes;
   using CrackingTheCodingInterview.Problems.DataStructures;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_4_CheckBalanced;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_04_CheckBalanced;
 
   public class Problem_4_4_CheckBalanced
   {

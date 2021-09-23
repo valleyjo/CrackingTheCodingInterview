@@ -3,10 +3,10 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_1_RouteBetweenNodes;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_01_RouteBetweenNodes;
 
   [TestClass]
-  public class Problem_4_1_RouteBetweenNodesTests
+  public class Problem_4_01_RouteBetweenNodesTests
   {
     [TestMethod]
     public void NullGraphTest() => Solution.Execute(null, 0, 0).Should().BeFalse();

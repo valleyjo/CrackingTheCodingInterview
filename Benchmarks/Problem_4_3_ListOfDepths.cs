@@ -3,7 +3,7 @@
   using System;
   using BenchmarkDotNet.Attributes;
   using CrackingTheCodingInterview.Problems.DataStructures;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_3_ListOfDepths;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_03_ListOfDepths;
 
   [MemoryDiagnoser]
   public class Problem_4_3_ListOfDepths

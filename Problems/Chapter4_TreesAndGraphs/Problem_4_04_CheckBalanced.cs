@@ -3,7 +3,7 @@
   using System;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
-  public static class Problem_4_4_CheckBalanced
+  public static class Problem_4_04_CheckBalanced
   {
     private const int MinDifferenceAllowed = 1;
 

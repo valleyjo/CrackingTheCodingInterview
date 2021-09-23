@@ -3,7 +3,7 @@
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
-  public static class Problem_4_1_RouteBetweenNodes
+  public static class Problem_4_01_RouteBetweenNodes
   {
     public static bool Execute(AGraph graph, int source, int dest)
     {

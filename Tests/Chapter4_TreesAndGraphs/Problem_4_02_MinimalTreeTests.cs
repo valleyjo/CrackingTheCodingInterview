@@ -5,10 +5,10 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_2_MinimalTree;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_02_MinimalTree;
 
   [TestClass]
-  public class Problem_4_2_MinimalTreeTests
+  public class Problem_4_02_MinimalTreeTests
   {
     [TestMethod]
     public void NullTest()

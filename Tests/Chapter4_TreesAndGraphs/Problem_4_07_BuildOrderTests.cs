@@ -4,10 +4,10 @@
   using System.Collections.Generic;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_7_BuildOrder;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_07_BuildOrder;
 
   [TestClass]
-  public class Problem_4_7_BuildOrderTests
+  public class Problem_4_07_BuildOrderTests
   {
     [TestMethod]
     public void NullTest()

@@ -2,7 +2,7 @@
 {
   using CrackingTheCodingInterview.Problems.DataStructures;
 
-  public static class Problem_4_6_Successor
+  public static class Problem_4_06_Successor
   {
     public static ABinaryTreeNode Execute(ABinaryTreeNode root)
     {

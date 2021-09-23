@@ -4,10 +4,10 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_5_ValidateBst;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_05_ValidateBst;
 
   [TestClass]
-  public class Problem_4_5_ValidateBstTests
+  public class Problem_4_05_ValidateBstTests
   {
     [TestMethod]
     public void NullTest() => Solution.Execute(null).Should().BeTrue();
