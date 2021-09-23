@@ -3,10 +3,10 @@
   using System.Collections.Generic;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_9_Parens;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_09_Parens;
 
   [TestClass]
-  public class Problem_8_9_ParensTests
+  public class Problem_8_09_ParensTests
   {
     [TestMethod]
     public void EmptyTest() => Solution.Execute(0).Should().BeEquivalentTo(new List<string>() { string.Empty });

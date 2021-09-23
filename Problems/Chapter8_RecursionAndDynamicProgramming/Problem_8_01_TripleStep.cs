@@ -1,6 +1,6 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming
 {
-  public static class Problem_8_1_TripleStep
+  public static class Problem_8_01_TripleStep
   {
     public static int Execute(int n)
     {

@@ -4,10 +4,10 @@
   using System.Collections.Generic;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_4_PowerSet;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_04_PowerSet;
 
   [TestClass]
-  public class Problem_8_4_PowerSetTests
+  public class Problem_8_04_PowerSetTests
   {
     [TestMethod]
     public void NullTest() => Solution.Execute(null).Should().BeNull();

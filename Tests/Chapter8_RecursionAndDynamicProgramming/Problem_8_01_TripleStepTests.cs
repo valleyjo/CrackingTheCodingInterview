@@ -2,10 +2,10 @@
 {
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_1_TripleStep;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_01_TripleStep;
 
   [TestClass]
-  public class Problem_8_1_TripleStepTests
+  public class Problem_8_01_TripleStepTests
   {
     [TestMethod]
     public void ZeroTest() => Solution.Execute(0).Should().Be(1);

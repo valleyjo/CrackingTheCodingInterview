@@ -2,7 +2,7 @@
 {
   using System.Collections.Generic;
 
-  public static class Problem_8_6_TowersOfHanoi
+  public static class Problem_8_06_TowersOfHanoi
   {
     public static Stack<int> Execute(int size)
     {

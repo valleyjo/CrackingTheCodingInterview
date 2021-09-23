@@ -3,10 +3,10 @@
   using System;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_3_MagicIndex;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_03_MagicIndex;
 
   [TestClass]
-  public class Problem_8_3_MagicIndexTests
+  public class Problem_8_03_MagicIndexTests
   {
     [TestMethod]
     public void NullTest() => Solution.Execute(null).Should().Be(-1);

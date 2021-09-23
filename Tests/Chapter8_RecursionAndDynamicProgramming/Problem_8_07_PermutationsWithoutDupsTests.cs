@@ -3,10 +3,10 @@
   using System.Collections.Generic;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_7_PermutationsWithoutDups;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_07_PermutationsWithoutDups;
 
   [TestClass]
-  public class Problem_8_7_PermutationsWithoutDupsTests
+  public class Problem_8_07_PermutationsWithoutDupsTests
   {
     [TestMethod]
     public void EmptyTest() => Solution.Execute(string.Empty).Should().BeEquivalentTo(new List<string>() { string.Empty });

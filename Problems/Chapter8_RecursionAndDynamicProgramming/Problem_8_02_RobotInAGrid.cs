@@ -3,7 +3,7 @@
   using System;
   using System.Collections.Generic;
 
-  public static class Problem_8_2_RobotInAGrid
+  public static class Problem_8_02_RobotInAGrid
   {
     private record Point
     {

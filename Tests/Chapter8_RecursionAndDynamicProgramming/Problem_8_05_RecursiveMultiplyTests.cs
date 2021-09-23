@@ -2,10 +2,10 @@
 {
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_5_RecursiveMultiply;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_05_RecursiveMultiply;
 
   [TestClass]
-  public class Problem_8_5_RecursiveMultiplyTests
+  public class Problem_8_05_RecursiveMultiplyTests
   {
     [TestMethod]
     public void NormalTest() => Solution.Execute(5, 12).Should().Be(60);

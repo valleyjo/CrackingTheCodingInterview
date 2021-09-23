@@ -3,10 +3,10 @@
   using System.Collections.Generic;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_6_TowersOfHanoi;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming.Problem_8_06_TowersOfHanoi;
 
   [TestClass]
-  public class Problem_8_6_TowersOfHanoiTests
+  public class Problem_8_06_TowersOfHanoiTests
   {
     [TestMethod]
     public void ZeroTest() => Solution.Execute(0).Should().BeEquivalentTo(new Stack<int>());

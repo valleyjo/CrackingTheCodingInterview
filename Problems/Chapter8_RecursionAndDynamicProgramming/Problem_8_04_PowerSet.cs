@@ -2,7 +2,7 @@
 {
   using System.Collections.Generic;
 
-  public static class Problem_8_4_PowerSet
+  public static class Problem_8_04_PowerSet
   {
     public static List<List<int>> Execute(int[] a)
     {

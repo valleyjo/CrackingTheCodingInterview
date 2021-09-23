@@ -2,7 +2,7 @@
 {
   using System;
 
-  public static class Problem_8_5_RecursiveMultiply
+  public static class Problem_8_05_RecursiveMultiply
   {
     public static uint Execute(uint a, uint b)
     {

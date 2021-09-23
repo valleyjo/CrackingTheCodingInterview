@@ -2,7 +2,7 @@
 {
   using System;
 
-  public static class Problem_8_3_MagicIndex
+  public static class Problem_8_03_MagicIndex
   {
     public static int Execute(int[] a)
     {
