@@ -25,5 +25,4 @@
     [TestMethod]
     public void TwentyFiveTest() => Solution.Execute(5).Should().Be(2);
   }
-  }
 }
