@@ -5,21 +5,6 @@
 
   public static class Problem_8_02_RobotInAGrid
   {
-    private record Point
-    {
-      public Point(int row, int col)
-      {
-        this.Row = row;
-        this.Col = col;
-      }
-
-      public int Row { get; }
-
-      public int Col { get; }
-
-      public override string ToString() => $"[{this.Row},{this.Col}]";
-    }
-
     public static bool Execute(bool[,] grid)
     {
       if (grid.Rank != 2)
@@ -66,6 +51,21 @@
 
       // check if a path exists by going to the right and down
       return Execute(grid, row + 1, col, visited, visitedSet) || Execute(grid, row, col + 1, visited, visitedSet);
+    }
+
+    private record Point
+    {
+      public Point(int row, int col)
+      {
+        this.Row = row;
+        this.Col = col;
+      }
+
+      public int Row { get; }
+
+      public int Col { get; }
+
+      public override string ToString() => $"[{this.Row},{this.Col}]";
     }
   }
 }

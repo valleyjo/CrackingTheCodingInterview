@@ -8,8 +8,8 @@
   /// </summary>
   public class Problem_4_11_RandomNode
   {
-    private readonly List<int> data = new ();
-    private readonly Random rand = new ();
+    private readonly List<int> data = new();
+    private readonly Random rand = new();
 
     public RandomBinaryTreeNode Find(int val)
     {
@@ -53,7 +53,7 @@
 
     public void Insert(int val) => this.data.Add(val);
 
-    public RandomBinaryTreeNode GetRandomNode() => new (this.data, this.rand.Next(0, this.data.Count));
+    public RandomBinaryTreeNode GetRandomNode() => new(this.data, this.rand.Next(0, this.data.Count));
 
     public class RandomBinaryTreeNode
     {

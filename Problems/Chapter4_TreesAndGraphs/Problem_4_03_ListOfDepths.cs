@@ -93,7 +93,7 @@
 
     public class DepthMap : IEnumerable<KeyValuePair<int, List<ABinaryTreeNode>>>
     {
-      private readonly Dictionary<int, List<ABinaryTreeNode>> depthMap = new ();
+      private readonly Dictionary<int, List<ABinaryTreeNode>> depthMap = new();
 
       public List<ABinaryTreeNode> this[int value]
       {
