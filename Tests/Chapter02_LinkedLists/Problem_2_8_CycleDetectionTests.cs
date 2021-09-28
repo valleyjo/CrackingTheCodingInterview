@@ -1,9 +1,9 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter02_LinkedLists.Tests
 {
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Problem = CrackingTheCodingInterview.Problems.Chapter2_LinkedLists.Problem_2_8_CycleDetection;
+  using Problem = CrackingTheCodingInterview.Problems.Chapter02_LinkedLists.Problem_2_8_CycleDetection;
 
   [TestClass]
   public class Problem_2_8_CycleDetectionTests

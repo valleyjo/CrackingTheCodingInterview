@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists
+﻿namespace CrackingTheCodingInterview.Problems.Chapter02_LinkedLists
 {
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;

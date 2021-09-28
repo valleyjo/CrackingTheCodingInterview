@@ -1,10 +1,10 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter2_LinkedLists.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter02_LinkedLists.Tests
 {
   using System;
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Problem = CrackingTheCodingInterview.Problems.Chapter2_LinkedLists.Problem_2_1_RemoveDups;
+  using Problem = CrackingTheCodingInterview.Problems.Chapter02_LinkedLists.Problem_2_1_RemoveDups;
 
   [TestClass]
   public class Problem_2_1_RemoveDupsTests

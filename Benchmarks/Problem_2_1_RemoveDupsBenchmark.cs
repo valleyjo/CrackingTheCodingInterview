@@ -2,7 +2,7 @@
 {
   using System;
   using BenchmarkDotNet.Attributes;
-  using CrackingTheCodingInterview.Problems.Chapter2_LinkedLists;
+  using CrackingTheCodingInterview.Problems.Chapter02_LinkedLists;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
   [MemoryDiagnoser]
