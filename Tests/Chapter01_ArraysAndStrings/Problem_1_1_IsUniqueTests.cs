@@ -1,8 +1,8 @@
-namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings.Tests
+namespace CrackingTheCodingInterview.Problems.Chapter01_ArraysAndStrings.Tests
 {
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Problem = CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings.Problem_1_1_IsUnique;
+  using Problem = CrackingTheCodingInterview.Problems.Chapter01_ArraysAndStrings.Problem_1_1_IsUnique;
 
   [TestClass]
   public class Problem_1_1_IsUniqueTests

@@ -1,7 +1,7 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter01_ArraysAndStrings.Tests
 {
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Problem = CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings.Problem_1_7_RotateMatrix;
+  using Problem = CrackingTheCodingInterview.Problems.Chapter01_ArraysAndStrings.Problem_1_7_RotateMatrix;
 
   [TestClass]
   public class Problem_1_7_RotateMatrixTests

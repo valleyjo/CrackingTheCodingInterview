@@ -3,7 +3,7 @@
   using System;
   using System.Text;
   using BenchmarkDotNet.Attributes;
-  using CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings;
+  using CrackingTheCodingInterview.Problems.Chapter01_ArraysAndStrings;
 
   [MemoryDiagnoser]
   public class Problem_1_1_IsUniqueBenchmark

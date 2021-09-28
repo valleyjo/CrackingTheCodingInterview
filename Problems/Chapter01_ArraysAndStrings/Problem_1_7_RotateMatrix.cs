@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter1_ArraysAndStrings
+﻿namespace CrackingTheCodingInterview.Problems.Chapter01_ArraysAndStrings
 {
     public static class Problem_1_7_RotateMatrix
     {
