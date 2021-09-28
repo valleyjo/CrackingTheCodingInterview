@@ -6,11 +6,11 @@
   using CrackingTheCodingInterview.Problems.Chapter01_ArraysAndStrings;
 
   [MemoryDiagnoser]
-  public class Problem_1_1_IsUniqueBenchmark
+  public class Problem_01_1_IsUniqueBenchmark
   {
     private readonly string data;
 
-    public Problem_1_1_IsUniqueBenchmark()
+    public Problem_01_1_IsUniqueBenchmark()
     {
       var sb = new StringBuilder();
       var random = new Random();

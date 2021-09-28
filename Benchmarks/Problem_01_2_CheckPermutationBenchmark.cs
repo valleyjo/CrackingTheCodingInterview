@@ -5,12 +5,12 @@
   using BenchmarkDotNet.Attributes;
   using CrackingTheCodingInterview.Problems.Chapter01_ArraysAndStrings;
 
-  public class Problem_1_2_CheckPermutationBenchmark
+  public class Problem_01_2_CheckPermutationBenchmark
   {
     private readonly string dataOne;
     private readonly string dataTwo;
 
-    public Problem_1_2_CheckPermutationBenchmark()
+    public Problem_01_2_CheckPermutationBenchmark()
     {
       var sbOne = new StringBuilder();
       var sbTwo = new StringBuilder();

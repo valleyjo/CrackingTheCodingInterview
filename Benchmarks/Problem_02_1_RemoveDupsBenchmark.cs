@@ -6,12 +6,12 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
 
   [MemoryDiagnoser]
-  public class Problem_2_1_RemoveDupsBenchmark
+  public class Problem_02_1_RemoveDupsBenchmark
   {
     private readonly AListNode<int> dataOne;
     private readonly AListNode<int> dataTwo;
 
-    public Problem_2_1_RemoveDupsBenchmark()
+    public Problem_02_1_RemoveDupsBenchmark()
     {
       int[] data = new int[10000];
 
