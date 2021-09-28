@@ -1,9 +1,9 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests.Tests
 {
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_08_FirstCommonAncestor;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests.Problem_4_08_FirstCommonAncestor;
 
   [TestClass]
   public class Problem_4_08_LeastCommonAncestorTests

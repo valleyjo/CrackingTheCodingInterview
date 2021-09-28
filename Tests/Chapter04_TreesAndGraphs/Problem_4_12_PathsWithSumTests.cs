@@ -1,10 +1,10 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests.Tests
 {
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_12_PathsWithSum;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests.Problem_4_12_PathsWithSum;
 
   [TestClass]
   public class Problem_4_12_PathsWithSumTests

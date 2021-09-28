@@ -1,8 +1,8 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests.Tests
 {
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter4_TreesAndGraphs.Problem_4_11_RandomNode;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests.Problem_4_11_RandomNode;
 
   [TestClass]
   public class Problem_4_11_RandomNodeTests

@@ -1,9 +1,9 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter03_StacksAndQueues.Tests
 {
   using System;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using StackOfStacks = CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues.Problem_3_3_StackOfStacks;
+  using StackOfStacks = CrackingTheCodingInterview.Problems.Chapter03_StacksAndQueues.Problem_3_3_StackOfStacks;
 
   [TestClass]
   public class Problem_3_3_StackOfStacksTests

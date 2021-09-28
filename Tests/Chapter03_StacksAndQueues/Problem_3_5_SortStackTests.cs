@@ -1,10 +1,10 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter03_StacksAndQueues.Tests
 {
   using System;
   using System.Collections.Generic;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Problem = CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues.Problem_3_5_SortStack;
+  using Problem = CrackingTheCodingInterview.Problems.Chapter03_StacksAndQueues.Problem_3_5_SortStack;
 
   [TestClass]
   public class Problem_3_5_SortStackTests

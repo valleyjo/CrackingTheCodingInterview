@@ -1,8 +1,8 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter5_BitManipulation.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter05_BitManipulation.Tests
 {
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter5_BitManipulation.Problem_5_3_FlipBitToWin;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter05_BitManipulation.Problem_5_3_FlipBitToWin;
 
   [TestClass]
   public class Problem_5_3_FlipBitToWinTests

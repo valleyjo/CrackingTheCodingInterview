@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter8_RecursionAndDynamicProgramming
+﻿namespace CrackingTheCodingInterview.Problems.Chapter08_RecursionAndDynamicProgramming
 {
   public static class Problem_8_10_PaintFill
   {

@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter5_BitManipulation
+﻿namespace CrackingTheCodingInterview.Problems.Chapter05_BitManipulation
 {
   public static class Problem_5_8_DrawLine
   {

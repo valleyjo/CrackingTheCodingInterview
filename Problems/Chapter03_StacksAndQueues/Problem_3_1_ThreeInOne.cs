@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter3_StacksAndQueues
+﻿namespace CrackingTheCodingInterview.Problems.Chapter03_StacksAndQueues
 {
   using System;
   using System.Text;

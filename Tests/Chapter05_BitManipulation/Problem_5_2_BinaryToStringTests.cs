@@ -1,8 +1,8 @@
-﻿namespace CrackingTheCodingInterview.Problems.Chapter5_BitManipulation.Tests
+﻿namespace CrackingTheCodingInterview.Problems.Chapter05_BitManipulation.Tests
 {
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter5_BitManipulation.Problem_5_2_BinaryToString;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter05_BitManipulation.Problem_5_2_BinaryToString;
 
   [TestClass]
   public class Problem_5_2_BinaryToStringTests
