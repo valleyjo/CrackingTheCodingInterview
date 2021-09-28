@@ -7,7 +7,7 @@
   {
     public static void Main()
     {
-      BenchmarkRunner.Run<Problem_4_4_CheckBalanced>();
+      BenchmarkRunner.Run<Problem_10_02_GroupAnagramsBenchmark>();
       ////new Problem_4_3_ListOfDepths();
       ////BinaryTreePrinter();
     }
