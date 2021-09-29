@@ -6,12 +6,12 @@
   using Solution = CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests.Problem_4_03_ListOfDepths;
 
   [MemoryDiagnoser]
-  public class Problem_4_3_ListOfDepths
+  public class Problem_04_3_ListOfDepths
   {
     private const int MaxDepth = 6;
     private readonly ABinaryTreeNode root;
 
-    public Problem_4_3_ListOfDepths()
+    public Problem_04_3_ListOfDepths()
     {
       this.root = BuildTree(0, new Random());
     }

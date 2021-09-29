@@ -5,12 +5,12 @@
   using CrackingTheCodingInterview.Problems.DataStructures;
   using Solution = CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests.Problem_4_04_CheckBalanced;
 
-  public class Problem_4_4_CheckBalanced
+  public class Problem_04_4_CheckBalanced
   {
     private const int MaxDepth = 10;
     private readonly ABinaryTreeNode root;
 
-    public Problem_4_4_CheckBalanced()
+    public Problem_04_4_CheckBalanced()
     {
       this.root = BuildTree(0, new Random());
     }
