@@ -16,25 +16,28 @@
 
       int start = 0;
       int end = strings.Count - 1;
-      int mid = (start + end) / 2;
       while (start <= end)
       {
+        int mid = (start + end) / 2;
+
         for (int delta = 0; ; delta++)
         {
-          if (mid + delta < strings.Count && !string.IsNullOrEmpty(strings[delta]))
+          int nextRightIndex = mid + delta;
+          if (nextRightIndex < strings.Count && !string.IsNullOrEmpty(strings[nextRightIndex]))
           {
-            mid += delta;
+            mid = nextRightIndex;
             break;
           }
 
-          if (mid - delta >= 0 && !string.IsNullOrEmpty(strings[delta]))
+          int nextLeftIndex = mid - delta;
+          if (mid - delta >= 0 && !string.IsNullOrEmpty(strings[nextLeftIndex]))
           {
-            mid -= delta;
+            mid = nextLeftIndex;
             break;
           }
 
-          // entire list is empty string
-          if (mid + delta > end && mid - delta < start)
+          // Search window is all empty string, therefore target does not exist in the list
+          if (nextRightIndex > end && nextLeftIndex < start)
           {
             return -1;
           }
@@ -47,11 +50,11 @@
 
         if (strings[mid].CompareTo(target) < 0)
         {
-          end = mid - 1;
+          start = mid + 1;
         }
         else
         {
-          start = mid + 1;
+          end = mid - 1;
         }
       }
 

@@ -56,6 +56,7 @@
 
     private static void Log(string msg) => Logger?.Invoke(msg);
 
+    // TODO: iterative implementation
     private static int BinarySearch(int start, int end, int target, Listy listy)
     {
       int mid = (start + end) / 2;
