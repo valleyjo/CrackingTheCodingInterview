@@ -7,8 +7,32 @@
   {
     public static Action<string> Logger { get; set; }
 
-    public static int Execute(MemoryStream stream)
+    public static int Execute(Stream stream)
     {
+      long maxInts = 1L << 30;
+      bool[] vector = new bool[maxInts];
+
+      int lastReadBytes = 0;
+      byte[] data = new byte[4];
+      do
+      {
+        lastReadBytes = stream.Read(data, 0, sizeof(int));
+        int value = BitConverter.ToInt32(data, 0);
+        if (lastReadBytes > 0)
+        {
+          vector[value] = true;
+        }
+      }
+      while (lastReadBytes > 0);
+
+      for (int i = 0; i < vector.Length; i++)
+      {
+        if (!vector[i])
+        {
+          return i;
+        }
+      }
+
       return -1;
     }
   }

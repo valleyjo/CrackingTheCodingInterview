@@ -10,14 +10,15 @@
   public class Problem_10_07_MissingIntTests
   {
     [TestMethod]
-    public void DuplicateTest()
+    public void GenerateMissingIntTest()
     {
       var stream = new MemoryStream();
-      stream.Write(BitConverter.GetBytes(1), 0 * sizeof(int), sizeof(int));
-      stream.Write(BitConverter.GetBytes(2), 1 * sizeof(int), sizeof(int));
-      stream.Write(BitConverter.GetBytes(3), 2 * sizeof(int), sizeof(int));
-      stream.Write(BitConverter.GetBytes(1), 3 * sizeof(int), sizeof(int));
-      Solution.Execute(stream).Should().Be(1);
+      stream.Write(BitConverter.GetBytes(0), 0, sizeof(int));
+      stream.Write(BitConverter.GetBytes(1), 0, sizeof(int));
+      stream.Write(BitConverter.GetBytes(2), 0, sizeof(int));
+      stream.Write(BitConverter.GetBytes(3), 0, sizeof(int));
+      stream.Seek(0, SeekOrigin.Begin);
+      Solution.Execute(stream).Should().Be(4);
     }
   }
 }
