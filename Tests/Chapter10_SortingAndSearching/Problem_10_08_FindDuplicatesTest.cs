@@ -16,7 +16,7 @@
     public void NullTest() => Solution.Execute(null).Should().BeEquivalentTo(new List<int>());
 
     [TestMethod]
-    public void EmptyTest() => Solution.Execute(new int[0]).Should().BeEquivalentTo(new List<int>());
+    public void EmptyTest() => Solution.Execute(System.Array.Empty<int>()).Should().BeEquivalentTo(new List<int>());
 
     [TestMethod]
     public void NoDuplicatesTest()

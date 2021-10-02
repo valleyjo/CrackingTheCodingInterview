@@ -11,7 +11,7 @@
     public void NullTest() => Solution.Execute(null).Should().BeNull();
 
     [TestMethod]
-    public void EmptyTest() => Solution.Execute(new string[0]).Should().BeEquivalentTo(new string[0]);
+    public void EmptyTest() => Solution.Execute(System.Array.Empty<string>()).Should().BeEquivalentTo(System.Array.Empty<string>());
 
     [TestMethod]
     public void MultupleValuesTests()
@@ -24,7 +24,7 @@
     public void Sorting_NullATest() => Solution.ExecuteWithSorting(null).Should().BeNull();
 
     [TestMethod]
-    public void Sorting_EmptyTest() => Solution.ExecuteWithSorting(new string[0]).Should().BeEquivalentTo(new string[0]);
+    public void Sorting_EmptyTest() => Solution.ExecuteWithSorting(System.Array.Empty<string>()).Should().BeEquivalentTo(System.Array.Empty<string>());
 
     [TestMethod]
     public void Sorting_MultupleValuesTests()
@@ -37,7 +37,7 @@
     public void SortingWithMap_NullATest() => Solution.ExecuteMapWithSorting(null).Should().BeNull();
 
     [TestMethod]
-    public void SortingWithMap_EmptyTest() => Solution.ExecuteMapWithSorting(new string[0]).Should().BeEquivalentTo(new string[0]);
+    public void SortingWithMap_EmptyTest() => Solution.ExecuteMapWithSorting(System.Array.Empty<string>()).Should().BeEquivalentTo(System.Array.Empty<string>());
 
     [TestMethod]
     public void SortingWithMap_MultupleValuesTests()

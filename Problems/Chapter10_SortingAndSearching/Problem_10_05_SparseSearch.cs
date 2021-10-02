@@ -48,7 +48,7 @@
           return mid;
         }
 
-        if (strings[mid].CompareTo(target) < 0)
+        if (string.Compare(strings[mid], target, StringComparison.Ordinal) < 0)
         {
           start = mid + 1;
         }

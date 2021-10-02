@@ -11,7 +11,7 @@
     public void NullTest() => Solution.Execute(null, 0).Should().Be(-1);
 
     [TestMethod]
-    public void EmptyTest() => Solution.Execute(new int[0], 0).Should().Be(-1);
+    public void EmptyTest() => Solution.Execute(System.Array.Empty<int>(), 0).Should().Be(-1);
 
     [TestMethod]
     public void FoundAtFirstIndexTest()

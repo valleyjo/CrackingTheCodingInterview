@@ -11,7 +11,7 @@
     [TestMethod]
     public void NullATest()
     {
-      Action a = () => Solution.Execute(null, new int[0]);
+      Action a = () => Solution.Execute(null, Array.Empty<int>());
       a.Should().Throw<ArgumentException>();
     }
 
