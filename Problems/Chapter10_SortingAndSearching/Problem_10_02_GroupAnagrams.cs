@@ -78,7 +78,7 @@
           char[] pChars = p.ToCharArray();
           Array.Sort(sChars);
           Array.Sort(pChars);
-          return string.Compare(new string(sChars), new string(pChars));
+          return string.Compare(new string(sChars), new string(pChars), StringComparison.OrdinalIgnoreCase);
         });
 
       return input;
