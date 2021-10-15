@@ -1,99 +1,46 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Chapter10_SortingAndSearching.Tests
 {
+  using System;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter10_SortingAndSearching.Problem_10_10_RankFromStream;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter10_SortingAndSearching.Problem_10_11_PeaksAndValleys;
 
   [TestClass]
-  public class Problem_10_10_RankFromStreamTests
+  public class Problem_10_11_PeaksAndValleysTests
   {
     [TestMethod]
     public void EmptyTest()
     {
-      var sln = new Solution();
-      sln.GetRank(400).Should().Be(-1);
+      Solution.Execute(Array.Empty<int>()).Should().BeEquivalentTo(Array.Empty<int>());
+      Solution.ExecuteFaster(Array.Empty<int>()).Should().BeEquivalentTo(Array.Empty<int>());
     }
 
     [TestMethod]
-    public void NotFoundTest()
+    public void SizeOneTest()
     {
-      var sln = new Solution();
-      sln.Track(10);
-      sln.Track(5);
-      sln.Track(15);
-      sln.Track(2);
-      sln.GetRank(7).Should().Be(-1);
+      Solution.Execute(new int[] { 0 }).Should().BeEquivalentTo(new int[] { 0 });
+      Solution.ExecuteFaster(new int[] { 0 }).Should().BeEquivalentTo(new int[] { 0 });
     }
 
     [TestMethod]
-    public void RootTest()
+    public void SizeTwoTest()
     {
-      var sln = new Solution();
-      sln.Track(10);
-      sln.Track(5);
-      sln.Track(15);
-      sln.Track(2);
-      sln.GetRank(10).Should().Be(2);
+      Solution.Execute(new int[] { 0, 1, }).Should().BeEquivalentTo(new int[] { 0, 1 });
+      Solution.ExecuteFaster(new int[] { 0, 1, }).Should().BeEquivalentTo(new int[] { 0, 1 });
     }
 
     [TestMethod]
-    public void SmallestTest()
+    public void SizeThreeTest()
     {
-      var sln = new Solution();
-      sln.Track(10);
-      sln.Track(5);
-      sln.Track(15);
-      sln.Track(2);
-      sln.GetRank(2).Should().Be(0);
+      Solution.Execute(new int[] { 0, 1, 3, }).Should().BeEquivalentTo(new int[] { 0, 3, 1, });
+      Solution.ExecuteFaster(new int[] { 0, 1, 3, }).Should().BeEquivalentTo(new int[] { 0, 3, 1, });
     }
 
     [TestMethod]
-    public void BiggestTest()
+    public void SizeSevenTest()
     {
-      var sln = new Solution();
-      sln.Track(10);
-      sln.Track(5);
-      sln.Track(15);
-      sln.Track(2);
-      sln.GetRank(15).Should().Be(3);
-    }
-
-    [TestMethod]
-    public void DuplicatesTest()
-    {
-      var sln = new Solution();
-      sln.Track(10);
-      sln.Track(5);
-      sln.Track(5);
-      sln.Track(15);
-      sln.Track(2);
-      sln.GetRank(5).Should().Be(2);
-    }
-
-    [TestMethod]
-    public void WorstCasePerformanceAscendingTest()
-    {
-      var sln = new Solution();
-      sln.Track(1);
-      sln.Track(2);
-      sln.Track(3);
-      sln.Track(4);
-      sln.Track(5);
-      sln.GetRank(1).Should().Be(0);
-      sln.GetRank(5).Should().Be(4);
-    }
-
-    [TestMethod]
-    public void WorstCasePerformanceDescendingTest()
-    {
-      var sln = new Solution();
-      sln.Track(5);
-      sln.Track(4);
-      sln.Track(3);
-      sln.Track(2);
-      sln.Track(1);
-      sln.GetRank(1).Should().Be(0);
-      sln.GetRank(5).Should().Be(4);
+      Solution.Execute(new int[] { 5, 3, 2, -1, 6, 8, 4 }).Should().BeEquivalentTo(new int[] { 3, 5, 2, 6, -1, 8, 4 });
+      Solution.ExecuteFaster(new int[] { 5, 3, 2, -1, 6, 8, 4, }).Should().BeEquivalentTo(new int[] { 3, 5, 2, 6, -1, 8, 4 });
     }
   }
 }
