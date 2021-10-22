@@ -1,4 +1,4 @@
-﻿namespace CrackingTheCodingInterview.Problems.Tests.Chapter16_Moderate
+﻿namespace CrackingTheCodingInterview.Problems.Chapter16_Moderate.Tests
 {
   using System;
   using FluentAssertions;
