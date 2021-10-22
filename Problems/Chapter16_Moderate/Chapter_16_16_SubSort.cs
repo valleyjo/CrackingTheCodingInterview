@@ -18,13 +18,15 @@
       if (start == input.Length - 1)
       {
         // array is already sorted
+        // ambiguous between invalid input
+        // maybe 0,0
         return InvalidRange;
       }
 
       int end = FindEndIndex(input);
 
       int min = input[start];
-      int max = input[start];
+      int max = input[end];
       for (int i = start; i <= end; i++)
       {
         min = Math.Min(input[i], min);
@@ -39,11 +41,11 @@
 
     private static int ShrinkRight(int[] input, int max)
     {
-      for (int end = input.Length - 1; end >= 0 && input[end] >= max; end--)
+      for (int i = input.Length - 1; i >= 0; i--)
       {
-        if (input[end] < max)
+        if (input[i] < max)
         {
-          return end;
+          return i;
         }
       }
 
@@ -52,11 +54,11 @@
 
     private static int ShrinkLeft(int[] input, int min)
     {
-      for (int start = 0; start < input.Length; start++)
+      for (int i = 0; i < input.Length; i++)
       {
-        if (input[start] > min)
+        if (input[i] > min)
         {
-          return start;
+          return i;
         }
       }
 
@@ -65,22 +67,28 @@
 
     private static int FindStartIndex(int[] input)
     {
-      int i = 0;
-      for (i = 0; i < input.Length - 2 && input[i] <= input[i + 1]; i++)
+      for (int i = 0; i < input.Length - 2; i++)
       {
+        if (input[i] > input[i + 1])
+        {
+          return i + 1;
+        }
       }
 
-      return i == input.Length - 2 && input[i] <= input[i + 1] ? i + 1 : i;
+      return input.Length - 1;
     }
 
     private static int FindEndIndex(int[] input)
     {
-      int i = 0;
-      for (i = input.Length - 2; i >= 0 && input[i] <= input[i + 1]; i--)
+      for (int i = input.Length - 2; i >= 0; i--)
       {
+        if (input[i] > input[i + 1])
+        {
+          return i + 1;
+        }
       }
 
-      return i;
+      return 0;
     }
 
     public struct Range
