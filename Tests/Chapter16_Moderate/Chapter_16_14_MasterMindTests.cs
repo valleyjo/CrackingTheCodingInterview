@@ -3,7 +3,7 @@
   using System;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter16_Moderate.Chapter_16_14_MasterMind;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter16_Moderate.Chapter_16_15_MasterMind;
 
   [TestClass]
   public class Chapter_16_14_MasterMindTests

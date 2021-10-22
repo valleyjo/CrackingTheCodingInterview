@@ -4,7 +4,7 @@
   using System.Collections.Generic;
 
   // TODO: Add tests
-  public static class Chapter_16_14_MasterMind
+  public static class Chapter_16_15_MasterMind
   {
     private static readonly Result InvalidResult = new(-1, -1);
 
