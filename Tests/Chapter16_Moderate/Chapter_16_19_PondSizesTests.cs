@@ -7,7 +7,7 @@
   using Solution = CrackingTheCodingInterview.Problems.Chapter16_Moderate.Chapter_16_19_PondSizes;
 
   [TestClass]
-  public class Chapter_16_18_PondSizesTests
+  public class Chapter_16_19_PondSizesTests
   {
     [TestMethod]
     public void ThreePondTest()
