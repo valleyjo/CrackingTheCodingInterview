@@ -4,51 +4,60 @@
   using System.Collections.Generic;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter16_Moderate.Chapter_16_26_Calculator;
+  using LruCache = CrackingTheCodingInterview.Problems.Chapter16_Moderate.Chapter_16_25_LruCache;
 
   [TestClass]
-  public class Chapter_16_26_CalculatorTests
+  public class Chapter_16_25_LruCache
   {
     [TestMethod]
-    public void OneOpTest()
+    public void AddOneTest()
     {
-      Solution.Execute("5*3").Should().Be(15.0d);
+      var cache = new LruCache(5);
+      cache.Add(5, 10);
+      cache.Get(5).Should().Be(10);
     }
 
     [TestMethod]
-    public void TwoOpTest()
+    public void AddLimitTest()
     {
-      Solution.Execute("5*3+4").Should().Be(19.0d);
+      var cache = new LruCache(5);
+
+      // value = key * 3
+      cache.Add(1, 6);
+      cache.Add(2, 12);
+      cache.Add(3, 18);
+      cache.Add(4, 25);
+      cache.Add(5, 30);
+      cache.Get(5).Should().Be(30);
+      cache.Get(1).Should().Be(6);
     }
 
     [TestMethod]
-    public void SameOpTest()
+    public void TriggerEvictionTest()
     {
-      Solution.Execute("5+3+1+7+4").Should().Be(20.0d);
-    }
+      var cache = new LruCache(5);
+      cache.Add(1, 6);
+      cache.Add(2, 12);
+      cache.Add(3, 18);
+      cache.Add(4, 24);
+      cache.Add(5, 30);
 
-    [TestMethod]
-    public void DescendingPriorityTest()
-    {
-      Solution.Execute("5-2+4/5*2").Should().Be(2.6d);
-    }
+      // 4, 24 -> 5, 30 -> 3, 18 -> 2, 12 -> 1, 6
+      cache.Get(4).Should().Be(24);
 
-    [TestMethod]
-    public void AscendingPriorityTest()
-    {
-      Solution.Execute("2*5/4+2-5").Should().Be(-0.5d);
-    }
+      // 2, 12 -> 4, 24 -> 5, 30 -> 3, 18 -> 1, 6
+      cache.Get(2).Should().Be(12);
 
-    [TestMethod]
-    public void MultiDigitNumberTest()
-    {
-      Solution.Execute("2*215").Should().Be(430d);
-    }
+      // 6, 36 -> 2, 12 -> 4, 24 -> 5, 30 -> 3, 18
+      cache.Add(6, 36);
 
-    [TestMethod]
-    public void DecimalDigitTest()
-    {
-      Solution.Execute("2.05*215").Should().BeApproximately(440.75d, 0.1d);
+      Action act = () => cache.Get(1);
+      act.Should().Throw<KeyNotFoundException>();
+
+      // 7, 42 -> 6, 36 -> 2, 12 -> 4, 24 -> 5, 30
+      cache.Add(7, 42);
+      act = () => cache.Get(3);
+      act.Should().Throw<KeyNotFoundException>();
     }
   }
 }
