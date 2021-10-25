@@ -14,5 +14,17 @@
     {
       Solution.Execute(5, 3).Should().Be(8);
     }
+
+    [TestMethod]
+    public void NegativeResultTest()
+    {
+      Solution.Execute(-5, 3).Should().Be(-2);
+    }
+
+    [TestMethod]
+    public void BothNegativeTest()
+    {
+      Solution.Execute(-5, -3).Should().Be(-8);
+    }
   }
 }
