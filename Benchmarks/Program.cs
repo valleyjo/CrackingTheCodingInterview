@@ -11,7 +11,7 @@
   {
     public static void Main()
     {
-      Console.WriteLine(Problems.Chapter16_Moderate.Chapter_16_22_LangtonsAnt.Execute(40));
+      Console.WriteLine(Problems.Chapter16_Moderate.Problem_16_22_LangtonsAnt.Execute(40));
 
       const int taskCount = 10;
       var finalResults = new ConcurrentDictionary<int, int>(InitializeHistogram());
@@ -54,7 +54,7 @@
       Dictionary<int, int> histogram = InitializeHistogram();
       for (int i = 0; i < end; i++)
       {
-        int num = Problems.Chapter16_Moderate.Chapter_16_23_Rand7FromRand5.Execute();
+        int num = Problems.Chapter16_Moderate.Problem_16_23_Rand7FromRand5.Execute();
         histogram[num]++;
       }
 
