@@ -7,7 +7,7 @@
   using Solution = CrackingTheCodingInterview.Problems.Chapter16_Moderate.Problem_16_26_Calculator;
 
   [TestClass]
-  public class Chapter_16_26_CalculatorTests
+  public class Problem_16_26_CalculatorTests
   {
     [TestMethod]
     public void OneOpTest()

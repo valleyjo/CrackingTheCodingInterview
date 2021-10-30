@@ -28,7 +28,7 @@
           // must make this check to ensure the weight is OK
           if (people[i].IsBiggerThan(people[j]))
           {
-            currentMax = Math.Max(currentMax, maxSize[j]);
+            currentMax = Math.Max(currentMax, maxSize[j] + 1);
           }
         }
 

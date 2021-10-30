@@ -4,31 +4,25 @@
   using System.Collections.Generic;
   using FluentAssertions;
   using Microsoft.VisualStudio.TestTools.UnitTesting;
-  using Solution = CrackingTheCodingInterview.Problems.Chapter17_Hard.Problem_17_07_BabyNames;
+  using Solution = CrackingTheCodingInterview.Problems.Chapter17_Hard.Problem_17_08_CircusTower;
 
   [TestClass]
-  public class Problem_17_07_BabyNamesTests
+  public class Problem_17_08_CircusTowerTests
   {
     [TestMethod]
     public void BasicTest()
     {
-      var namePairs = new List<string>() { "Jon:John", "John:Johnny", "Chris:Kris", "Chris:Christopher" };
-      var nameCounts = new List<Problem_17_07_BabyNames.NameFrequency>()
+      var people = new Solution.Person[]
       {
-        new Solution.NameFrequency("John", 15),
-        new Solution.NameFrequency("Jon", 12),
-        new Solution.NameFrequency("Chris", 13),
-        new Solution.NameFrequency("Kris", 4),
-        new Solution.NameFrequency("Christopher", 19),
+        new Solution.Person(65, 100),
+        new Solution.Person(70, 150),
+        new Solution.Person(56, 90),
+        new Solution.Person(75, 190),
+        new Solution.Person(60, 95),
+        new Solution.Person(68, 110),
       };
 
-      var solution = new List<Solution.NameFrequency>()
-      {
-        new Solution.NameFrequency("Jon", 27),
-        new Solution.NameFrequency("Chris", 36),
-      };
-
-      Solution.Execute(nameCounts, namePairs).Should().BeEquivalentTo(solution);
+      Solution.Execute(people).Should().Be(6);
     }
   }
 }

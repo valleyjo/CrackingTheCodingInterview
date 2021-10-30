@@ -7,7 +7,7 @@
   using LruCache = CrackingTheCodingInterview.Problems.Chapter16_Moderate.Problem_16_25_LruCache;
 
   [TestClass]
-  public class Chapter_16_25_LruCacheTests
+  public class Problem_16_25_LruCacheTests
   {
     [TestMethod]
     public void AddOneTest()
