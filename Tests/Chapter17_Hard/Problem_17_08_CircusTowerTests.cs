@@ -24,5 +24,21 @@
 
       Solution.Execute(people).Should().Be(6);
     }
+
+    [TestMethod]
+    public void OneTallSkinnyPerson()
+    {
+      var people = new Solution.Person[]
+      {
+        new Solution.Person(65, 120), // won't contribute to tallest tower
+        new Solution.Person(70, 150),
+        new Solution.Person(56, 90),
+        new Solution.Person(75, 190),
+        new Solution.Person(60, 95),
+        new Solution.Person(68, 110),
+      };
+
+      Solution.Execute(people).Should().Be(5);
+    }
   }
 }
