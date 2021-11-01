@@ -3,6 +3,7 @@
   using System;
   using System.Collections.Generic;
   using System.Text;
+  using CrackingTheCodingInterview.Problems.DataStructures;
 
   public static class Problem_16_20_T9
   {
@@ -26,7 +27,7 @@
         return results;
       }
 
-      Execute(results, input, 0, string.Empty, new Trie(words));
+      Execute(results, input, 0, string.Empty, new ATrie(words));
       return results;
     }
 
@@ -85,7 +86,7 @@
       return result;
     }
 
-    private static void Execute(List<string> results, string input, int index, string prefix, Trie prefixes)
+    private static void Execute(List<string> results, string input, int index, string prefix, ATrie prefixes)
     {
       if (index == input.Length)
       {
@@ -103,78 +104,6 @@
         if (prefixes.ContainsPrefix(newPrefix))
         {
           Execute(results, input, index + 1, prefix + c, prefixes);
-        }
-      }
-    }
-
-    // TODO extract and test
-    private class Trie
-    {
-      private readonly TrieNode root = new();
-
-      public Trie(List<string> words)
-      {
-        foreach (string word in words)
-        {
-          this.AddWord(word);
-        }
-      }
-
-      public void AddWord(string word)
-      {
-        this.root.AddWord(word, 0);
-      }
-
-      public bool ContainsPrefix(string prefix) => this.root.ContainsPrefix(prefix, 0) != null;
-
-      public bool ContainsWord(string word)
-      {
-        TrieNode node = this.root.ContainsPrefix(word, 0);
-        return node != null && node.IsTerminal;
-      }
-
-      private class TrieNode
-      {
-        private readonly Dictionary<char, TrieNode> children = new();
-
-        public bool IsTerminal { get; private set; }
-
-        public void AddWord(string word, int index)
-        {
-          if (index == word.Length)
-          {
-            return;
-          }
-          else if (index == word.Length - 1)
-          {
-            this.IsTerminal = true;
-          }
-
-          char c = word[index];
-          if (!this.children.TryGetValue(c, out TrieNode nextNode))
-          {
-            nextNode = new TrieNode();
-            this.children[c] = nextNode;
-          }
-
-          nextNode.AddWord(word, index + 1);
-        }
-
-        public TrieNode ContainsPrefix(string prefix, int index)
-        {
-          char c = prefix[index];
-          if (this.children.ContainsKey(c))
-          {
-            // we are at the last char and it exists in the trie
-            if (prefix.Length - 1 == index)
-            {
-              return this;
-            }
-
-            return this.children[c].ContainsPrefix(prefix, index + 1);
-          }
-
-          return null;
         }
       }
     }
