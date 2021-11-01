@@ -24,10 +24,7 @@
       this.type = type;
     }
 
-    public bool Empty
-    {
-      get { return this.graph.Count == 0; }
-    }
+    public bool Empty => this.graph.Count == 0;
 
     public List<int> this[int value] => this.graph[value];
 
