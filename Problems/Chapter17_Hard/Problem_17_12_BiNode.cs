@@ -31,7 +31,10 @@
         return root;
       }
 
-      return ExecuteRecursive(root);
+      BiNode start = ExecuteRecursive(root);
+      start.One.Two = null;
+      start.One = null;
+      return start;
     }
 
     private static BiNode ExecuteRecursive(BiNode root)
@@ -40,58 +43,36 @@
       {
         return null;
       }
-      else if (root.One == null && root.Two == null)
+
+      BiNode leftChildren = ExecuteRecursive(root.One);
+      BiNode rightChildren = ExecuteRecursive(root.Two);
+
+      if (leftChildren == null && rightChildren == null)
       {
         root.One = root;
         root.Two = root;
         return root;
       }
 
-      BiNode leftHalf = ExecuteRecursive(root.One);
-      BiNode rightHalf = ExecuteRecursive(root.Two);
-
-      if (root.One == null && root.Two == null)
-      {
-        root.One = root;
-        root.Two = root;
-        return root;
-      }
-
-      if (leftHalf != null)
+      if (leftChildren != null)
       {
         // connect the end of the left half to the root
-        leftHalf.Two.One = root;
-        root.One = leftHalf.Two;
-
-        // break the infinite loop
-        if (leftHalf.One != null)
-        {
-          leftHalf.One.Two = null;
-        }
-      }
-      else
-      {
-        root.One = null;
+        Join(leftChildren.Two, root);
       }
 
-      if (rightHalf != null)
+      if (rightChildren != null)
       {
         // connect the start of the right half to the root
-        rightHalf.One.Two = root;
-        root.Two = rightHalf.One;
-
-        // break the infinite loop
-        if (rightHalf.Two != null)
-        {
-          rightHalf.Two.One = null;
-        }
-      }
-      else
-      {
-        root.Two = null;
+        Join(root, rightChildren.One);
       }
 
-      return root;
+      return leftChildren == null ? root : leftChildren;
+    }
+
+    private static void Join(BiNode first, BiNode second)
+    {
+      first.Two = second;
+      second.One = first;
     }
 
     private static BiNode ConvertWithCopy(BiNode root)
