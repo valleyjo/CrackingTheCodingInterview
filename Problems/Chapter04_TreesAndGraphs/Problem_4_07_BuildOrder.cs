@@ -58,7 +58,7 @@
       }
     }
 
-    // use two graphs to support O910 lookup and removal of a node
+    // use two graphs to support O(1) lookup and removal of a node
     private static void BuildGraphs(List<int> projects, List<Dependency> dependencies, out AGraph graph, out AGraph reverseGraph)
     {
       graph = new AGraph(GraphType.Directional);
