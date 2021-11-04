@@ -1,5 +1,6 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests
 {
+  using System;
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 
@@ -7,17 +8,17 @@
   {
     /*
 requirements:
-return build order
-if no build order, return empty list
+return cost to execute the chain of operations
+if no build order, return -1
 
 assumptions:
-build order may or may not exist
+execution order may or may not exist
 should handle cycles
 have an adjacency list graph to work with
 distinct item IDs
 
 method signiture:
-public static List<int> DependencyOrder(Graph graph, int start)
+public static int DependencyOrder(Graph graph, int start, Dictionary<int, int> cost)
 
 Test cases:
 cycle
@@ -28,13 +29,26 @@ happy path
 
 BFS -> O(V+E) time O(V+E) space
 DFS -> same
-Pick BFS -> easier to extend if needed
+Pick DFS -> We only care about the starting node, BFS we will have to look at all nodes
 
 steps:
 1) filter graph for only connected nodes O(V + E)
 2) topological sort to get the cost, exclude non-connected nodes
  */
-    public static List<int> MinDependencyOrder(this AGraph graph, int start)
+    // TODO: use Object for dependency and make graph generic
+    public static int MinDependencyOrder_DFS(AGraph graph, int start, Dictionary<int, int> cost)
+    {
+      if (!graph.ContainsNode(start))
+      {
+        return -1;
+      }
+
+      // Use an object for the key with status built in?
+      var finishedMap = new Dictionary<int, bool>();
+      return MinDependencyOrder_DFS(finishedMap, graph, start, cost);
+    }
+
+    public static List<int> MinDependencyOrder(AGraph graph, int start)
     {
       var results = new List<int>();
       if (!graph.ContainsNode(start))
@@ -51,7 +65,7 @@ steps:
       {
         int node = queue.Dequeue();
         results.Add(node);
-        foreach (int nextNode in graph)
+        foreach (int nextNode in graph[node])
         {
           if (graph[nextNode].Contains(nextNode))
           {
@@ -105,6 +119,33 @@ steps:
       }
 
       return visited;
+    }
+
+    private static int MinDependencyOrder_DFS(
+      Dictionary<int, bool> finishedMap,
+      AGraph graph,
+      int start,
+      Dictionary<int, int> cost)
+    {
+      if (finishedMap.ContainsKey(start) && !finishedMap[start])
+      {
+        return -1;
+      }
+
+      int total = cost[start];
+      finishedMap[start] = false;
+      foreach (int connectedNode in graph[start])
+      {
+        int subTotal = MinDependencyOrder_DFS(finishedMap, graph, connectedNode, cost);
+        if (subTotal == -1)
+        {
+          return -1;
+        }
+
+        total += subTotal;
+      }
+
+      return total;
     }
   }
 }
