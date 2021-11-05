@@ -1,6 +1,5 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Chapter04_TreesAndGraphsTests
 {
-  using System;
   using System.Collections.Generic;
   using CrackingTheCodingInterview.Problems.DataStructures;
 

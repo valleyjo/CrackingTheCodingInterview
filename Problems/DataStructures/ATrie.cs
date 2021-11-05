@@ -1,18 +1,14 @@
 ﻿namespace CrackingTheCodingInterview.Problems.DataStructures
 {
-  using System;
   using System.Collections.Generic;
-  using System.Linq;
-  using System.Text;
-  using System.Threading.Tasks;
 
   public class ATrie
   {
     private readonly TrieNode root = new();
 
-    public ATrie(List<string> words)
+    public ATrie(IEnumerable<string> words)
     {
-      if (words == null || words.Count == 0)
+      if (words == null)
       {
         return;
       }
