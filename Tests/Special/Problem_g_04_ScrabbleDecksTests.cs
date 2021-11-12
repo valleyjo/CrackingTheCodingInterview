@@ -10,14 +10,15 @@
   public class Problem_g_04_ScrabbleDeckTests
   {
     [TestMethod]
-    public void BaseCaseOneTest()
+    public void EnsureNoDuplicatesTest()
     {
-      Dictionary<char, int> counts = new();
-      counts['A'] = 2;
-      counts['B'] = 3;
-      counts['C'] = 2;
-      counts['D'] = 4;
-      counts['E'] = 1;
+      int[] counts = new int[26];
+
+      counts[0] = 2;
+      counts[1] = 3;
+      counts[3] = 2;
+      counts[4] = 4;
+      counts[5] = 1;
       List<string> results = Solution.Execute(counts);
 
       HashSet<string> filteredResults = new();

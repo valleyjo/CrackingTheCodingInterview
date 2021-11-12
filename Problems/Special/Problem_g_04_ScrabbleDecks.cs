@@ -1,6 +1,5 @@
 ﻿namespace CrackingTheCodingInterview.Problems.Special
 {
-  using System;
   using System.Collections.Generic;
 
   public static class Problem_g_04_ScrabbleDecks
@@ -16,30 +15,28 @@
         return results;
       }
 
-      Execute(counts, results, string.Empty);
+      Execute(counts, 0, results, string.Empty);
 
       return results;
     }
 
-    private static void Execute(int[] counts, List<string> results, string prefix)
+    private static void Execute(int[] counts, int startingIndex, List<string> results, string prefix)
     {
-      if (prefix.Length > DeckSize)
-      {
-        return;
-      }
-      else if (prefix.Length == DeckSize)
+      if (prefix.Length == DeckSize)
       {
         results.Add(prefix);
         return;
       }
 
-      foreach (KeyValuePair<char, int> kvp in counts)
+      Execute(counts, startingIndex + 1, results, prefix);
+
+      for (; startingIndex < counts.Length; startingIndex++)
       {
         string extendedPrefix = prefix;
-        for (int i = kvp.Value; i > 0; i--)
+        for (int letterCount = counts[startingIndex]; letterCount > 0 && extendedPrefix.Length < DeckSize; letterCount--)
         {
-          extendedPrefix += kvp.Key;
-          Execute(counts, results, extendedPrefix);
+          extendedPrefix += IndexToChar(startingIndex);
+          Execute(counts, startingIndex + 1, results, extendedPrefix);
         }
       }
     }

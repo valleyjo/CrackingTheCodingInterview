@@ -7,9 +7,9 @@
   {
     // assume routers contains start and dest
     // assume non-null input
-    public static bool Execute(List<Router> routers, Router start, Router dest)
+    public static bool Execute(List<Router> routers, Router currentRouter, Router dest)
     {
-      if (start.Equals(dest))
+      if (currentRouter.Equals(dest))
       {
         return true;
       }
@@ -24,7 +24,7 @@
 
         // ASSUME: manhattan distance.
         // alt 1: diagonal distance, pythagran therorem.
-        if (start.CanTransmitTo(nextRouter))
+        if (currentRouter.CanTransmitTo(nextRouter))
         {
           // disable the router and recurse
           nextRouter.Enabled = false;
