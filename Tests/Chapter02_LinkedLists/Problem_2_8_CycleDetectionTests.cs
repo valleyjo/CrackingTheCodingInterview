@@ -31,7 +31,7 @@
       var head = AListNode<int>.FromArray(new int[] { 0, 1, 2, 3, 4, });
 
       // get '4'
-      var tail = head.Next.Next.Next.Next;
+      AListNode<int> tail = head.Next.Next.Next.Next;
 
       // connect '4' to '2'
       tail.Next = head.Next.Next;

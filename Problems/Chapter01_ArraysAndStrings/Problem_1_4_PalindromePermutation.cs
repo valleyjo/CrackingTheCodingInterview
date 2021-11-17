@@ -25,7 +25,7 @@
       }
 
       bool foundOddCount = false;
-      foreach (var kvp in charCounts)
+      foreach (KeyValuePair<char, int> kvp in charCounts)
       {
         if (kvp.Value % 2 == 1)
         {

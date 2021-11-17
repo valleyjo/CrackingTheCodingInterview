@@ -9,14 +9,14 @@
     [TestMethod]
     public void SizeThreeArrayTest()
     {
-      var data = new int[][]
+      int[][] data = new int[][]
       {
         new int[] { 1, 2, 3, },
         new int[] { 4, 5, 6, },
         new int[] { 7, 8, 9, },
       };
 
-      var rotated = new int[][]
+      int[][] rotated = new int[][]
       {
         new int[] { 7, 4, 1, },
         new int[] { 8, 5, 2, },
@@ -31,12 +31,12 @@
     [TestMethod]
     public void SizeOneArray()
     {
-      var data = new int[][]
+      int[][] data = new int[][]
       {
         new int[] { 0, },
       };
 
-      var rotated = new int[][]
+      int[][] rotated = new int[][]
       {
         new int[] { 0, },
       };

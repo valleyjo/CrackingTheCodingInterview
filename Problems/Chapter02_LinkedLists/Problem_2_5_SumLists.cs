@@ -60,7 +60,7 @@
 
       int carry = 0;
       var head = new AListNode<int>();
-      var cur = head;
+      AListNode<int> cur = head;
       while (one != null || two != null || carry > 0)
       {
         int result;

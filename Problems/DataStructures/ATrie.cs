@@ -62,6 +62,18 @@
         nextNode.AddWord(word, index + 1);
       }
 
+      public KeyValuePair<string, int> GetUniquePrefix(string word, int index)
+      {
+        if (index == word.Length)
+        {
+          return new KeyValuePair<string, int>(word.Substring(0, index), 0);
+        }
+
+        char nextChar = word[index];
+
+        return new KeyValuePair<string, int>(string.Empty, 0);
+      }
+
       public TrieNode ContainsPrefix(string prefix, int index)
       {
         if (string.IsNullOrEmpty(prefix) || index < 0)

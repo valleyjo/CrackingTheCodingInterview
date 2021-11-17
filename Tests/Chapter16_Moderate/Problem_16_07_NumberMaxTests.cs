@@ -15,6 +15,6 @@
     public void ZeroTest() => Solution.Execute(0, 0).Should().Be(0);
 
     [TestMethod]
-    public void NegativeTest() => Solution.Execute(-5, -7).Should().Be(05);
+    public void NegativeTest() => Solution.Execute(-5, -7).Should().Be(5);
   }
 }

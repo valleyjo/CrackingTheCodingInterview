@@ -10,14 +10,14 @@
     [TestMethod]
     public void OneZeroTest()
     {
-      var matrix = new int[,]
+      int[,] matrix = new int[,]
       {
                 { 1, 0, 1, 1, },
                 { 1, 1, 1, 1, },
                 { 1, 1, 1, 1, },
       };
 
-      var zeroedMatrix = new int[,]
+      int[,] zeroedMatrix = new int[,]
       {
                 { 0, 0, 0, 0, },
                 { 1, 0, 1, 1, },
@@ -31,14 +31,14 @@
     [TestMethod]
     public void TwoZeroTest()
     {
-      var matrix = new int[,]
+      int[,] matrix = new int[,]
       {
                 { 1, 0, 1, 1, },
                 { 1, 1, 0, 1, },
                 { 1, 1, 1, 1, },
       };
 
-      var zeroedMatrix = new int[,]
+      int[,] zeroedMatrix = new int[,]
       {
                 { 0, 0, 0, 0, },
                 { 0, 0, 0, 0, },

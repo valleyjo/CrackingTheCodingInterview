@@ -24,7 +24,9 @@
       // pixel is not the droid we are looking for
       if (
         input.GetLength(0) - 1 < row ||
+        row < 0 ||
         input.GetLength(1) - 1 < col ||
+        col < 0 ||
         input[row, col] == newColor ||
         input[row, col] != selectedColor)
       {

@@ -28,7 +28,7 @@
     public void RemoveMiddleTest()
     {
       var list = AListNode<int>.FromArray(new int[] { 0, 1, 2, 3, 4, 5 });
-      var middle = list.Next;
+      AListNode<int> middle = list.Next;
       Problem.Execute(middle);
       list.ToString().Should().Be("(0) -> (2) -> (3) -> (4) -> (5)");
     }

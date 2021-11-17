@@ -20,7 +20,7 @@
     public void PartitionTest()
     {
       var list = AListNode<int>.FromArray(new int[] { 5, 1, 2, });
-      var partitionedList = Problem.Execute(list, 5);
+      AListNode<int> partitionedList = Problem.Execute(list, 5);
       partitionedList.ToString().Should().Be("(1) -> (2) -> (5)");
     }
   }
