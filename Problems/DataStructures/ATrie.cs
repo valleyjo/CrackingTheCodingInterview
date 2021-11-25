@@ -1,12 +1,13 @@
 ﻿namespace CrackingTheCodingInterview.Problems.DataStructures
 {
+  using System;
   using System.Collections.Generic;
 
   public class ATrie
   {
     private readonly TrieNode root = new();
 
-    public ATrie(IEnumerable<string> words)
+    public ATrie(IEnumerable<string> words = null)
     {
       if (words == null)
       {
@@ -33,6 +34,12 @@
     {
       TrieNode node = this.root.ContainsPrefix(word, 0);
       return node != null && node.IsTerminal;
+    }
+
+    public string GetShortestUniquePrefix(string word)
+    {
+      (_, string prefix) = this.root.GetUniquePrefix(word, 0);
+      return prefix;
     }
 
     private class TrieNode
@@ -62,18 +69,6 @@
         nextNode.AddWord(word, index + 1);
       }
 
-      public KeyValuePair<string, int> GetUniquePrefix(string word, int index)
-      {
-        if (index == word.Length)
-        {
-          return new KeyValuePair<string, int>(word.Substring(0, index), 0);
-        }
-
-        char nextChar = word[index];
-
-        return new KeyValuePair<string, int>(string.Empty, 0);
-      }
-
       public TrieNode ContainsPrefix(string prefix, int index)
       {
         if (string.IsNullOrEmpty(prefix) || index < 0)
@@ -94,6 +89,47 @@
         }
 
         return null;
+      }
+
+      public (int ChildCount, string Prefix) GetUniquePrefix(string word, int index)
+      {
+        if (index == word.Length)
+        {
+          return new(this.children.Count, string.Empty);
+        }
+
+        char nextChar = word[index];
+
+        if (this.children.ContainsKey(nextChar))
+        {
+          (int ChildCount, string Prefix) result =
+            this.children[nextChar].GetUniquePrefix(word, index + 1);
+
+          int isTerminalCount = this.IsTerminal && index != word.Length - 1 ? 1 : 0;
+          int nextChildCount = result.ChildCount + this.children.Count + isTerminalCount;
+
+          // we already found the prefix, return it up the stack
+          if (!string.IsNullOrEmpty(result.Prefix))
+          {
+            return result;
+          }
+
+          // when the child count is greater than the remaining characters for
+          // the first time we found the shortest unique prefix
+          else if (nextChildCount > (word.Length - index) || index == 0)
+          {
+            return new(-1, word.Substring(0, index + 1 + isTerminalCount));
+          }
+
+          // child count is equal to the remaining characters, this means we
+          // are on a branch which contains the shortest unique prefix
+          else
+          {
+            return new(nextChildCount, string.Empty);
+          }
+        }
+
+        return new(-1, string.Empty);
       }
     }
   }
