@@ -26,7 +26,7 @@
     [TestMethod]
     public void AddWordTest()
     {
-      var trie = new ATrie(new List<string>());
+      var trie = new ATrie();
       trie.AddWord("Freddy");
       trie.ContainsWord("Freddy").Should().BeTrue();
     }
@@ -34,7 +34,7 @@
     [TestMethod]
     public void ContainsPrefixTest()
     {
-      var trie = new ATrie(new List<string>());
+      var trie = new ATrie();
       trie.AddWord("Freddy");
       trie.ContainsPrefix("Fred").Should().BeTrue();
       trie.ContainsPrefix("Freddy").Should().BeTrue();
@@ -43,7 +43,7 @@
     [TestMethod]
     public void ContainsWordTest()
     {
-      var trie = new ATrie(new List<string>());
+      var trie = new ATrie();
       trie.AddWord("Freddy");
       trie.ContainsWord("Fred").Should().BeFalse();
       trie.ContainsWord("Freddy").Should().BeTrue();

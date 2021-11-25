@@ -1,6 +1,5 @@
 ﻿namespace CrackingTheCodingInterview.Problems.DataStructures
 {
-  using System;
   using System.Collections.Generic;
 
   public class ATrie
@@ -108,23 +107,21 @@
           int isTerminalCount = this.IsTerminal && index != word.Length - 1 ? 1 : 0;
           int nextChildCount = result.ChildCount + this.children.Count + isTerminalCount;
 
-          // we already found the prefix, return it up the stack
           if (!string.IsNullOrEmpty(result.Prefix))
           {
+            // we already found the prefix, return it up the stack
             return result;
           }
-
-          // when the child count is greater than the remaining characters for
-          // the first time we found the shortest unique prefix
           else if (nextChildCount > (word.Length - index) || index == 0)
           {
+            // when the child count is greater than the remaining characters for
+            // the first time we found the shortest unique prefix
             return new(-1, word.Substring(0, index + 1 + isTerminalCount));
           }
-
-          // child count is equal to the remaining characters, this means we
-          // are on a branch which contains the shortest unique prefix
           else
           {
+            // child count is equal to the remaining characters, this means we
+            // are on a branch which contains the shortest unique prefix
             return new(nextChildCount, string.Empty);
           }
         }
